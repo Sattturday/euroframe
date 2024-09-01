@@ -1,23 +1,91 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/styles.css" />
-    <!-- Подключение собственного CSS -->
-    <title>Лендинг</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Еврокаркас</title>
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <!-- Здесь будет твой контент -->
+    <header class="header">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <div class="row">
+              <nav class="navbar navbar-expand-xl" data-bs-theme="dark">
+                <div class="col-3">
+                  <a
+                    class="navbar-brand link-light text-uppercase d-flex align-items-center"
+                    href="#"
+                  >
+                    <img
+                      src="./images/Logo.svg"
+                      alt="Logo"
+                      class="d-inline-block align-text-top img-fluid sat-logo"
+                    />
+                    <span class="ms-3 sat-txt2 fw-bold">Еврокаркас</span>
+                  </a>
+                </div>
+                <button
+                  class="navbar-toggler right"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#navbarToggler"
+                  aria-controls="navbarToggler"
+                  aria-expanded="false"
+                  aria-label="Переключатель навигации"
+                >
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="col-9">
+                  <div class="collapse navbar-collapse" id="navbarToggler">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item sat-nav-item">
+                        <a class="link-light nav-link sat-txt1" href="#"
+                          >О&nbsp;компании</a
+                        >
+                      </li>
+                      <li class="nav-item sat-nav-item">
+                        <a class="link-light nav-link sat-txt1" href="#"
+                          >Проекты</a
+                        >
+                      </li>
+                      <li class="nav-item sat-nav-item">
+                        <a class="link-light nav-link sat-txt1" href="#"
+                          >Услуги</a
+                        >
+                      </li>
+                      <li class="nav-item sat-nav-item">
+                        <a class="link-light nav-link sat-txt1" href="#"
+                          >Вакансии</a
+                        >
+                      </li>
+                      <li class="nav-item sat-nav-item">
+                        <a class="nav-link link-light sat-txt1" href="#"
+                          >Контакты</a
+                        >
+                      </li>
+                    </ul>
+                    <div class="sat-group">
+                      <a href="#" class="btn sat-call"
+                        >+7 917 077 04 49
+                        <span>Связаться с нами</span>
+                      </a>
+                      <a href="#" class="btn btn-danger btn-lg sat-btn"
+                        >ЗАКАЗАТЬ ПРОЕКТ</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="js/scripts.js"></script>
-    <!-- Подключение собственного JS -->
+    <script src="js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

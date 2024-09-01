@@ -1,0 +1,89 @@
+@import '../node_modules/bootstrap/scss/functions';
+@import '../node_modules/bootstrap/scss/variables';
+
+$primary: #4281b5;
+$secondary: #00315a;
+$text-color: #fff;
+$color-red: #d9272e;
+
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+body {
+  font-family: 'Cera Pro', Arial, Helvetica, sans-serif !important;
+  color: $text-color;
+  background-color: $primary;
+}
+
+header,
+section,
+footer {
+  padding-left: 10px;
+  padding-right: 10px;
+
+  @include media-breakpoint-up(sm) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    padding-left: 116px;
+    padding-right: 116px;
+  }
+}
+
+.header {
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  @include media-breakpoint-down(sm) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  @include media-breakpoint-down(xl) {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+.sat-logo {
+  max-width: 52px;
+
+  @include media-breakpoint-down(sm) {
+    max-width: 40px;
+  }
+}
+
+.sat-nav-item {
+  padding-right: 50px;
+
+  @include media-breakpoint-down(xxl) {
+    padding-right: 20px;
+  }
+}
+
+.sat-txt1 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.sat-txt2 {
+  font-size: 26px;
+}
+
+.sat-group {
+  display: flex;
+  gap: 42px;
+}
+
+.sat-btn {
+  width: 268px;
+  font-size: 16px;
+  background-color: $color-red;
+  border-radius: 40px;
+}

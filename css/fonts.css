@@ -1,0 +1,51 @@
+@font-face {
+  font-family: 'Cera Pro';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('../fonts/cerapro-light.eot');
+  src: url('../fonts/cerapro-light.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/cerapro-light.woff2') format('woff2'),
+    url('../fonts/cerapro-light.woff') format('woff'),
+    url('../fonts/cerapro-light.ttf') format('truetype'),
+    url('../fonts/cerapro-light.svg#cerapro-light') format('svg');
+}
+
+@font-face {
+  font-family: 'Cera Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/cerapro-medium.eot');
+  src: url('../fonts/cerapro-medium.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/cerapro-medium.woff2') format('woff2'),
+    url('../fonts/cerapro-medium.woff') format('woff'),
+    url('../fonts/cerapro-medium.ttf') format('truetype'),
+    url('../fonts/cerapro-medium.svg#cerapro-medium') format('svg');
+}
+
+@font-face {
+  font-family: 'Cera Pro';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('../fonts/cerapro-medium.eot');
+  src: url('../fonts/cerapro-medium.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/cerapro-medium.woff2') format('woff2'),
+    url('../fonts/cerapro-medium.woff') format('woff'),
+    url('../fonts/cerapro-medium.ttf') format('truetype'),
+    url('../fonts/cerapro-medium.svg#cerapro-medium') format('svg');
+}
+
+@font-face {
+  font-family: 'Cera Pro';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../fonts/cerapro-bold.eot');
+  src: url('../fonts/cerapro-bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/cerapro-bold.woff2') format('woff2'),
+    url('../fonts/cerapro-bold.woff') format('woff'),
+    url('../fonts/cerapro-bold.ttf') format('truetype'),
+    url('../fonts/cerapro-bold.svg#cerapro-bold') format('svg');
+}
