@@ -6,6 +6,41 @@ $secondary: #00315a;
 $text-color: #fff;
 $color-red: #d9272e;
 
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1600px,
+  xxl: 1800px,
+);
+
+/* font */
+$fw-light: 300;
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-bold: 700;
+
+@mixin text(
+  $color: $text-color,
+  $font-size: 18px,
+  $font-weight: 400,
+  $line-height: normal
+) {
+  margin: 0;
+  padding: 0;
+  color: $color;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+}
+
+@mixin list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 @import '../node_modules/bootstrap/scss/bootstrap';
 
 body {
@@ -17,8 +52,8 @@ body {
 header,
 section,
 footer {
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
 
   @include media-breakpoint-up(sm) {
     padding-left: 40px;
@@ -36,19 +71,72 @@ footer {
   }
 }
 
+.sat-shadow-wrap {
+  filter: drop-shadow(0px 23px 16px rgba(0, 0, 0, 0.22));
+}
+
+.sat-p-bg {
+  position: relative;
+  background-image: url(../images/main.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 54, 99, 0.7);
+    z-index: 1;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 95%;
+    background-image: url(../images/main_gr.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 2;
+
+    @include media-breakpoint-down(lg) {
+      height: 50%;
+    }
+
+    @include media-breakpoint-down(sm) {
+      height: 30%;
+    }
+  }
+
+  & > * {
+    position: relative;
+    z-index: 3;
+  }
+}
+
 .header {
   padding-top: 50px;
-  padding-bottom: 50px;
-
-  @include media-breakpoint-down(sm) {
-    padding-top: 40px;
-    padding-bottom: 40px;
-  }
 
   @include media-breakpoint-down(xl) {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 30px;
   }
+
+  @include media-breakpoint-down(sm) {
+    padding-top: 10px;
+  }
+}
+
+.sat-h-txt1 {
+  @include text($font-size: 26px, $font-weight: $fw-bold);
+}
+
+.sat-h-txt2 {
+  @include text($font-size: 18px, $font-weight: $fw-medium);
 }
 
 .sat-logo {
@@ -67,23 +155,136 @@ footer {
   }
 }
 
-.sat-txt1 {
-  font-size: 18px;
-  font-weight: 500;
-}
-
-.sat-txt2 {
-  font-size: 26px;
-}
-
-.sat-group {
+.sat-h-group {
   display: flex;
   gap: 42px;
+
+  @include media-breakpoint-down(xl) {
+    padding-top: 50px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
 }
 
-.sat-btn {
+.sat-h-btn {
   width: 268px;
-  font-size: 16px;
+  height: 47px;
+  @include text($font-size: 16px, $font-weight: $fw-bold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: $color-red;
   border-radius: 40px;
+}
+
+.sat-h-call {
+  @include text($font-size: 22px, $font-weight: $fw-medium, $line-height: 1);
+}
+
+.sat-h-label {
+  @include text($font-size: 14px);
+  max-width: 120px;
+
+  @include media-breakpoint-down(xl) {
+    padding-left: 10px;
+    @include text($font-size: 16px);
+  }
+}
+
+// Promo section
+.sat-promo {
+  padding-top: 150px;
+  padding-bottom: 170px;
+
+  @include media-breakpoint-down(xxl) {
+    padding-bottom: 300px;
+  }
+
+  @include media-breakpoint-down(xl) {
+    padding-top: 100px;
+  }
+
+  @include media-breakpoint-down(lg) {
+    padding-bottom: 550px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding-top: 50px;
+  }
+}
+
+.sat-p-txt1 {
+  @include text($font-size: 41px, $font-weight: $fw-bold);
+  max-width: 777px;
+}
+
+.sat-p-txt2 {
+  @include text($font-size: 20px, $line-height: 1.7);
+  max-width: 894px;
+}
+
+.sat-p-btn {
+  width: 341px;
+  height: 50px;
+  @include text($font-size: 16px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 40px;
+}
+
+.sat-p-group {
+  width: 100%;
+  position: absolute;
+  bottom: -60px;
+  left: 0;
+}
+
+.sat-p-list {
+  @include list;
+
+  @include media-breakpoint-down(xxl) {
+    max-width: 840px;
+  }
+
+  @include media-breakpoint-down(lg) {
+    max-width: 410px;
+  }
+}
+
+.sat-p-card {
+  @include text($color: $secondary, $font-size: 17px, $font-weight: $fw-bold);
+  width: 410px;
+  height: 123px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $text-color;
+  box-shadow: 0px -21px 23px 0px rgba(66, 129, 181, 0.58) inset;
+  border-radius: 20px;
+
+  &-1 {
+    padding: 0 60px;
+  }
+
+  &-2 {
+    padding: 0 40px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    width: 320px;
+    &-1 {
+      padding: 0 60px;
+    }
+    &-2 {
+      padding: 0 40px;
+    }
+  }
+
+  span {
+    white-space: normal;
+    word-break: break-word;
+    text-align: center;
+  }
 }

@@ -16,12 +16,12 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('../fonts/cerapro-medium.eot');
-  src: url('../fonts/cerapro-medium.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/cerapro-medium.woff2') format('woff2'),
-    url('../fonts/cerapro-medium.woff') format('woff'),
-    url('../fonts/cerapro-medium.ttf') format('truetype'),
-    url('../fonts/cerapro-medium.svg#cerapro-medium') format('svg');
+  src: url('../fonts/cerapro-regular.eot');
+  src: url('../fonts/cerapro-regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/cerapro-regular.woff2') format('woff2'),
+    url('../fonts/cerapro-regular.woff') format('woff'),
+    url('../fonts/cerapro-regular.ttf') format('truetype'),
+    url('../fonts/cerapro-regular.svg#cerapro-regular') format('svg');
 }
 
 @font-face {
