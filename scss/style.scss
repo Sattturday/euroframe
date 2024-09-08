@@ -41,6 +41,15 @@ $fw-bold: 700;
   list-style: none;
 }
 
+@mixin link($color: $text-color) {
+  text-decoration: none;
+  color: $color;
+}
+
+@mixin line($weight: 1px, $color: $text-color) {
+  border-bottom: $weight solid $color;
+}
+
 @import '../node_modules/bootstrap/scss/bootstrap';
 
 body {
@@ -137,6 +146,7 @@ footer {
 
 .sat-h-txt2 {
   @include text($font-size: 18px, $font-weight: $fw-medium);
+  margin: auto;
 }
 
 .sat-logo {
@@ -286,5 +296,113 @@ footer {
     white-space: normal;
     word-break: break-word;
     text-align: center;
+  }
+}
+
+// section About
+.sat-about {
+  padding-top: 205px;
+  padding-bottom: 43px;
+  background-image: url(../images/about.png);
+  background-size: 36%;
+  background-position: left bottom;
+  background-repeat: no-repeat;
+
+  @include media-breakpoint-down(xl) {
+    padding-top: 150px;
+    background-position: left 32%;
+  }
+
+  @include media-breakpoint-down(lg) {
+    background-size: 75%;
+    background-position: left 10%;
+  }
+}
+
+.sat-a-txt1 {
+  @include text($font-size: 71px, $font-weight: $fw-light);
+  max-width: 440px;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  @include media-breakpoint-down(lg) {
+    max-width: 100%;
+  }
+
+  @include media-breakpoint-down(md) {
+    @include text($font-size: 50px, $font-weight: $fw-light);
+  }
+}
+
+.sat-a-txt2 {
+  @include text($font-size: 16px, $line-height: 1.81);
+  max-width: 748px;
+
+  &-1 {
+    padding-top: 133px;
+  }
+
+  @include media-breakpoint-down(xl) {
+    margin-left: auto;
+  }
+}
+
+.sat-a-txt3 {
+  @include text($font-size: 76px, $font-weight: $fw-medium);
+  letter-spacing: -8.9px;
+}
+
+.sat-a-txt4 {
+  @include text($font-size: 20px, $font-weight: $fw-light, $line-height: 0.9);
+  max-width: 155px;
+
+  @include media-breakpoint-down(sm) {
+    @include text($font-size: 16px, $font-weight: $fw-light, $line-height: 0.9);
+  }
+}
+
+.sat-a-info {
+  margin: 115px 0 50px;
+  padding: 40px 65px 0;
+  max-width: 552px;
+  max-height: 438px;
+  background-color: $secondary;
+  border-radius: 34px;
+
+  @include media-breakpoint-down(xl) {
+    margin-top: 50px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin-top: 20px;
+    padding: 20px 35px 0;
+  }
+}
+
+.sat-a-list {
+  @include list;
+  @include line($weight: 2px, $color: rgba(255, 255, 255, 0.31));
+}
+
+.sat-a-line {
+  @include line;
+}
+
+.sat-a-link {
+  @include link;
+  @include text($font-size: 15px, $line-height: 1.33);
+  padding: 30px 5px;
+  display: flex;
+  justify-content: space-between;
+
+  &:after {
+    content: '';
+    width: 65px;
+    height: 23px;
+    display: block;
+    background-image: url(../images/about-arrow.png);
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 }
