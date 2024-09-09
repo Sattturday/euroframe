@@ -12312,4 +12312,184 @@ footer {
   background-repeat: no-repeat;
 }
 
+.sat-projects {
+  padding-top: 70px;
+  padding-right: 0;
+}
+
+.sat-pr-txt1 {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.sat-pr-link {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: normal;
+  padding: 8px 16px;
+}
+@media (max-width: 767.98px) {
+  .sat-pr-link {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: normal;
+    padding: 4px 8px;
+  }
+}
+@media (max-width: 575.98px) {
+  .sat-pr-link {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: normal;
+    padding: 4px 4px;
+  }
+}
+
+.nav-tabs .nav-link.active {
+  background-color: inherit;
+  border: none;
+  border-bottom: 5px solid #fff;
+}
+
+.nav-tabs .nav-link {
+  border: none;
+}
+
+.sat-carousel {
+  padding-top: 78px;
+  position: relative;
+  overflow-x: hidden;
+  width: 100%; /* Ширина карусели */
+}
+@media (max-width: 575.98px) {
+  .sat-carousel {
+    padding-top: 30px;
+  }
+}
+
+.sat-track {
+  display: flex;
+  flex-wrap: nowrap;
+  transition: transform 0.3s ease; /* Для анимации прокрутки */
+}
+
+.sat-navigation {
+  margin-top: 56px;
+}
+@media (max-width: 575.98px) {
+  .sat-navigation {
+    margin-top: 30px;
+  }
+}
+
+.sat-navigation .btn {
+  pointer-events: all;
+  width: 65px;
+  aspect-ratio: 1/0.36;
+  background-size: cover;
+  background-position: center;
+}
+@media (max-width: 575.98px) {
+  .sat-navigation .btn {
+    width: 45px;
+  }
+}
+
+.sat-left {
+  background-image: url(../images/projects-arrow-left.svg);
+}
+
+.sat-right {
+  background-image: url(../images/projects-arrow-right.svg);
+}
+
+.sat-card {
+  flex: 0 0 auto;
+  margin-right: 16px;
+  padding: 24px 34px;
+  width: 552px;
+  aspect-ratio: 1/1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.sat-card-1 {
+  background: linear-gradient(to bottom, rgba(0, 49, 90, 0) calc(100% - 190px), rgba(0, 49, 90, 0.86) 100%), url(../images/card-1.jpg);
+}
+.sat-card-2 {
+  background: linear-gradient(to bottom, rgba(0, 49, 90, 0) calc(100% - 190px), rgba(0, 49, 90, 0.86) 100%), url(../images/card-2.jpg);
+}
+.sat-card-3 {
+  background: linear-gradient(to bottom, rgba(0, 49, 90, 0) calc(100% - 190px), rgba(0, 49, 90, 0.86) 100%), url(../images/card-3.jpg);
+}
+.sat-card-4 {
+  background: linear-gradient(to bottom, rgba(0, 49, 90, 0) calc(100% - 190px), rgba(0, 49, 90, 0.86) 100%), url(../images/card-4.jpg);
+  background-position: 0 center;
+}
+@media (max-width: 767.98px) {
+  .sat-card {
+    padding: 14px 24px;
+    width: 360px;
+  }
+  .sat-card-1 {
+    background: linear-gradient(to bottom, rgba(0, 49, 90, 0.3) calc(100% - 190px), rgb(0, 49, 90) 100%), url(../images/card-1.jpg);
+  }
+  .sat-card-2 {
+    background: linear-gradient(to bottom, rgba(0, 49, 90, 0.3) calc(100% - 190px), rgb(0, 49, 90) 100%), url(../images/card-2.jpg);
+  }
+  .sat-card-3 {
+    background: linear-gradient(to bottom, rgba(0, 49, 90, 0.3) calc(100% - 190px), rgb(0, 49, 90) 100%), url(../images/card-3.jpg);
+  }
+  .sat-card-4 {
+    background: linear-gradient(to bottom, rgba(0, 49, 90, 0.3) calc(100% - 190px), rgb(0, 49, 90) 100%), url(../images/card-4.jpg);
+    background-position: 0 center;
+  }
+}
+@media (max-width: 575.98px) {
+  .sat-card {
+    width: 280px;
+  }
+}
+
+.sat-title {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.sat-description {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.2;
+  min-height: 54px;
+}
+@media (max-width: 767.98px) {
+  .sat-description {
+    min-height: 80px;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
