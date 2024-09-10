@@ -11886,6 +11886,25 @@ footer {
   filter: drop-shadow(0px 23px 16px rgba(0, 0, 0, 0.22));
 }
 
+.sat-pr-m-wrap {
+  position: relative;
+  background-image: url(../images/projects-bg.png);
+  background-position: bottom;
+}
+.sat-pr-m-wrap:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 460px; /* Высота градиента */
+  background: linear-gradient(180deg, #4281b5 25.66%, rgba(66, 129, 181, 0) 100%);
+}
+.sat-pr-m-wrap > * {
+  position: relative;
+  z-index: 3;
+}
+
 .sat-p-bg {
   position: relative;
   background-image: url(../images/main.png);
@@ -12416,6 +12435,14 @@ footer {
   background-image: url(../images/projects-arrow-right.svg);
 }
 
+.sat-left-f {
+  background-image: url(../images/f-arrow-left.svg);
+}
+
+.sat-right-f {
+  background-image: url(../images/f-arrow-right.svg);
+}
+
 .sat-card {
   flex: 0 0 auto;
   margin-right: 16px;
@@ -12490,6 +12517,109 @@ footer {
   .sat-description {
     min-height: 80px;
   }
+}
+
+.sat-m-list {
+  margin-bottom: -300px;
+}
+
+.sat-m-list-group {
+  border-radius: 0px;
+}
+
+.sat-list-group-item {
+  padding-left: 63px;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sat-m-txt1 {
+  margin: 0;
+  padding: 0;
+  color: #4281b5;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: normal;
+  padding-bottom: 14px;
+}
+
+.sat-m-txt2 {
+  margin: 0;
+  padding: 0;
+  color: #858585;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.56;
+  max-width: 536px;
+}
+
+.sat-clients {
+  padding-top: 400px;
+  padding-bottom: 90px;
+  background-color: #e4e9ee;
+}
+
+.sat-c-txt1 {
+  margin: 0;
+  padding: 0;
+  color: #4281b5;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: normal;
+  padding-bottom: 70px;
+}
+
+.sat-c-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  padding: 0 95px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.sat-c-item {
+  opacity: 0.5;
+  mix-blend-mode: luminosity;
+}
+
+.sat-feedback {
+  padding-top: 85px;
+  padding-bottom: 174px;
+  background-color: #fff;
+}
+
+.sat-f-txt1 {
+  margin: 0;
+  padding: 0;
+  color: #4281b5;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: normal;
+  padding-bottom: 47px;
+}
+
+.sat-f-img {
+  width: 184px;
+  height: 250px;
+}
+
+.sat-form {
+  background-color: #00315a;
+  padding: 61px 91px;
+}
+
+.sat-label {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-size: 26px;
+  font-weight: 500;
+  line-height: normal;
 }
 
 /*# sourceMappingURL=style.css.map */

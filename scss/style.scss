@@ -5,6 +5,8 @@ $primary: #4281b5;
 $secondary: #00315a;
 $text-color: #fff;
 $color-red: #d9272e;
+$color-grey: #858585;
+$bg-grey: #e4e9ee;
 
 $grid-breakpoints: (
   xs: 0,
@@ -82,6 +84,31 @@ footer {
 
 .sat-shadow-wrap {
   filter: drop-shadow(0px 23px 16px rgba(0, 0, 0, 0.22));
+}
+
+.sat-pr-m-wrap {
+  position: relative;
+  background-image: url(../images/projects-bg.png);
+  background-position: bottom;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 460px; /* Высота градиента */
+    background: linear-gradient(
+      180deg,
+      $primary 25.66%,
+      rgba(66, 129, 181, 0) 100%
+    );
+  }
+
+  & > * {
+    position: relative;
+    z-index: 3;
+  }
 }
 
 .sat-p-bg {
@@ -488,6 +515,14 @@ footer {
   background-image: url(../images/projects-arrow-right.svg);
 }
 
+.sat-left-f {
+  background-image: url(../images/f-arrow-left.svg);
+}
+
+.sat-right-f {
+  background-image: url(../images/f-arrow-right.svg);
+}
+
 // card
 .sat-card {
   flex: 0 0 auto;
@@ -598,4 +633,88 @@ footer {
   @include media-breakpoint-down(md) {
     min-height: 80px;
   }
+}
+
+// section mission
+.sat-m-list {
+  margin-bottom: -300px;
+}
+
+.sat-m-list-group {
+  border-radius: 0px;
+}
+
+.sat-list-group-item {
+  padding-left: 63px;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sat-m-txt1 {
+  @include text($color: $primary, $font-size: 36px);
+  padding-bottom: 14px;
+}
+
+.sat-m-txt2 {
+  @include text(
+    $color: $color-grey,
+    $font-size: 16px,
+    $font-weight: $fw-light,
+    $line-height: 1.56
+  );
+  max-width: 536px;
+}
+
+// section clients
+.sat-clients {
+  padding-top: 400px;
+  padding-bottom: 90px;
+  background-color: $bg-grey;
+}
+
+.sat-c-txt1 {
+  @include text($color: $primary, $font-size: 36px);
+  padding-bottom: 70px;
+}
+
+.sat-c-list {
+  @include list;
+  padding: 0 95px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.sat-c-item {
+  opacity: 0.5;
+  mix-blend-mode: luminosity;
+}
+
+// section feedback
+.sat-feedback {
+  padding-top: 85px;
+  padding-bottom: 174px;
+  background-color: $text-color;
+}
+
+.sat-f-txt1 {
+  @include text($color: $primary, $font-size: 36px);
+  padding-bottom: 47px;
+}
+
+.sat-f-img {
+  width: 184px;
+  height: 250px;
+}
+
+.sat-form {
+  background-color: $secondary;
+  padding: 61px 91px;
+}
+
+.sat-label {
+  @include text($font-size: 26px, $font-weight: $fw-medium);
 }
