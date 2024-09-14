@@ -489,6 +489,12 @@ footer {
 
 .sat-navigation {
   margin-top: 56px;
+  margin-right: 116px;
+
+  &-f {
+    margin-top: 70px;
+    margin-right: 0;
+  }
 
   @include media-breakpoint-down(sm) {
     margin-top: 30px;
@@ -636,6 +642,10 @@ footer {
 }
 
 // section mission
+.sat-mission {
+  padding-top: 160px;
+}
+
 .sat-m-list {
   margin-bottom: -300px;
 }
@@ -646,7 +656,7 @@ footer {
 
 .sat-list-group-item {
   padding-left: 63px;
-  min-height: 200px;
+  min-height: 205px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -669,23 +679,28 @@ footer {
 
 // section clients
 .sat-clients {
-  padding-top: 400px;
-  padding-bottom: 90px;
+  padding-top: 395px;
+  padding-bottom: 78px;
   background-color: $bg-grey;
 }
 
 .sat-c-txt1 {
   @include text($color: $primary, $font-size: 36px);
-  padding-bottom: 70px;
+  padding-bottom: 50px;
 }
 
 .sat-c-list {
   @include list;
-  padding: 0 95px;
+  padding: 0 140px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
   gap: 30px;
+
+  &-3 {
+    padding: 0 100px 0 120px;
+  }
 }
 
 .sat-c-item {
@@ -697,6 +712,7 @@ footer {
 .sat-feedback {
   padding-top: 85px;
   padding-bottom: 174px;
+  position: relative;
   background-color: $text-color;
 }
 
@@ -705,16 +721,114 @@ footer {
   padding-bottom: 47px;
 }
 
+.sat-f-txt2 {
+  @include text($font-size: 26px, $font-weight: $fw-medium);
+  max-width: 270px;
+}
+
 .sat-f-img {
   width: 184px;
   height: 250px;
 }
 
+.sat-f-carousel {
+  position: relative;
+  overflow-x: hidden;
+  width: 100%;
+
+  @include media-breakpoint-down(sm) {
+    padding-top: 30px;
+  }
+}
+
+.sat-f-track {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: nowrap;
+  transition: transform 0.3s ease; /* Для анимации прокрутки */
+}
+
+// form feedback
 .sat-form {
+  padding: 61px 156px 61px 91px;
+  max-width: 1290px;
+  width: 100%;
+  position: absolute;
+  left: calc(50% - 645px);
+  bottom: -95px;
   background-color: $secondary;
-  padding: 61px 91px;
 }
 
 .sat-label {
-  @include text($font-size: 26px, $font-weight: $fw-medium);
+  @include text($font-size: 14px, $font-weight: $fw-light);
+  letter-spacing: 3px;
+}
+
+.sat-f-wrap {
+  border-bottom: 1px solid rgba(189, 189, 189, 1);
+
+  span {
+    @include text($font-size: 26px, $font-weight: $fw-light);
+  }
+}
+
+.sat-input {
+  @include text($font-size: 26px, $font-weight: $fw-light);
+  padding: 8px 2px;
+  width: 325px;
+  background-color: inherit;
+  box-sizing: border-box;
+  border: 0;
+  outline: none;
+}
+
+.sat-f-btn {
+  width: 265px;
+  height: 47px;
+  @include text($font-size: 16px, $font-weight: $fw-medium);
+  letter-spacing: 1.2px;
+  border-radius: 36px;
+}
+
+// footer
+.footer {
+  padding-top: 200px;
+  padding-bottom: 37px;
+}
+
+.sat-fo-nav-item {
+  padding-bottom: 30px;
+}
+
+.sat-contacts {
+  @include list;
+  padding-top: 62px;
+  gap: 38px;
+}
+
+.sat-fo-txt1 {
+  @include text($font-size: 14px, $font-weight: $fw-light);
+  letter-spacing: 1px;
+}
+
+.sat-fo-txt2 {
+  @include text($font-size: 18px, $font-weight: $fw-medium, $line-height: 1.61);
+  max-width: 308px;
+}
+
+.sat-fo-txt3 {
+  @include text($font-size: 18px, $font-weight: $fw-medium);
+
+  span {
+    @include line;
+  }
+}
+
+.sat-fo-txt4 {
+  @include text($font-size: 12px);
+
+  span {
+    @include line;
+  }
 }
