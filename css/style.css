@@ -12637,11 +12637,6 @@ footer {
   overflow-x: hidden;
   width: 100%;
 }
-@media (max-width: 575.98px) {
-  .sat-f-carousel {
-    padding-top: 30px;
-  }
-}
 
 .sat-f-track {
   display: flex;

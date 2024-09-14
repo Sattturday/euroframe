@@ -735,10 +735,6 @@ footer {
   position: relative;
   overflow-x: hidden;
   width: 100%;
-
-  @include media-breakpoint-down(sm) {
-    padding-top: 30px;
-  }
 }
 
 .sat-f-track {
