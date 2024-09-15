@@ -11845,6 +11845,19 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+* {
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:hover {
+  transition: 0.3s;
+}
+
 body {
   font-family: "Cera Pro", Arial, Helvetica, sans-serif !important;
   color: #fff;
@@ -11915,7 +11928,7 @@ footer {
   content: "";
   position: absolute;
   top: 0;
-  right: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 54, 99, 0.7);
@@ -11946,6 +11959,28 @@ footer {
 .sat-p-bg > * {
   position: relative;
   z-index: 3;
+}
+
+.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+video {
+  position: absolute; /* Позволяет видео занимать весь фон */
+  top: 50%;
+  left: 50%;
+  min-width: 100%; /* Минимальная ширина 100% */
+  min-height: 100%; /* Минимальная высота 100% */
+  width: auto; /* Автоматическая ширина */
+  height: auto; /* Автоматическая высота */
+  z-index: -1; /* Убедитесь, что видео находится под другими элементами */
+  transform: translate(-50%, -50%); /* Центрирует видео */
 }
 
 .header {
@@ -12628,8 +12663,11 @@ footer {
 }
 
 .sat-f-img {
+  margin-right: 5.5%;
   width: 184px;
   height: 250px;
+  box-sizing: border-box;
+  border: 5px solid #fff;
 }
 
 .sat-f-carousel {
