@@ -23,6 +23,16 @@ $fw-regular: 400;
 $fw-medium: 500;
 $fw-bold: 700;
 
+@mixin button {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
 @mixin text(
   $color: $text-color,
   $font-size: 18px,
@@ -52,6 +62,16 @@ $fw-bold: 700;
   border-bottom: $weight solid $color;
 }
 
+@mixin burger-line($color: $text-color) {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  background-color: $color;
+  width: 100%;
+  height: 2px;
+  transition: all 0.3s linear;
+}
+
 @import '../node_modules/bootstrap/scss/bootstrap';
 
 * {
@@ -71,6 +91,10 @@ body {
   font-family: 'Cera Pro', Arial, Helvetica, sans-serif !important;
   color: $text-color;
   background-color: $primary;
+}
+
+._lock {
+  overflow: hidden;
 }
 
 header,
@@ -126,9 +150,7 @@ footer {
 
 .sat-p-bg {
   position: relative;
-  background-image: url(../images/main.png);
-  background-size: cover;
-  background-repeat: no-repeat;
+  transition: all 0.5s linear;
 
   &:before {
     content: '';
@@ -166,6 +188,18 @@ footer {
     position: relative;
     z-index: 3;
   }
+
+  &_active {
+    background-color: $secondary;
+
+    &:after {
+      visibility: hidden;
+    }
+
+    .video {
+      display: none;
+    }
+  }
 }
 
 .video {
@@ -197,13 +231,17 @@ video {
     padding-top: 30px;
   }
 
-  @include media-breakpoint-down(sm) {
-    padding-top: 10px;
+  @include media-breakpoint-down(md) {
+    padding-top: 20px;
   }
 }
 
 .sat-h-txt1 {
   @include text($font-size: 26px, $font-weight: $fw-bold);
+
+  @include media-breakpoint-down(md) {
+    @include text($font-size: 20px, $font-weight: $fw-bold);
+  }
 }
 
 .sat-h-txt2 {
@@ -211,31 +249,200 @@ video {
   margin: auto;
 }
 
+// nav-menu
+.sat-navbar {
+  display: flex;
+  align-items: flex-start;
+}
+
+.sat-h-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.sat-burger {
+  display: block;
+  position: relative;
+  width: 34px;
+  height: 27px;
+  z-index: 11;
+  cursor: pointer;
+  transition: all 0.3s linear;
+
+  &:before {
+    @include burger-line;
+    top: 0;
+    left: 0;
+  }
+
+  &:after {
+    @include burger-line;
+    bottom: 0;
+    left: 0;
+  }
+
+  &_active .sat-burger-line {
+    transform: scale(0) translate(0px, -50%);
+  }
+
+  &_active:before {
+    top: 50%;
+    transform: rotate(45deg) translate(0px, -75%);
+  }
+
+  &_active:after {
+    bottom: 50%;
+    transform: rotate(-45deg) translate(0, 75%);
+  }
+}
+
+.sat-burger-line {
+  @include burger-line;
+  top: calc(50% - 1px);
+  left: 0;
+  transform: scale(1);
+  transition: all 0.3s linear;
+}
+
+.sat-brand {
+  margin: 0;
+  margin-right: 153px;
+  min-width: 238px;
+
+  @include media-breakpoint-down(xl) {
+    margin: 0;
+  }
+
+  @include media-breakpoint-down(md) {
+    min-width: 187px;
+  }
+}
+
 .sat-logo {
   max-width: 52px;
 
-  @include media-breakpoint-down(sm) {
+  @include media-breakpoint-down(md) {
     max-width: 40px;
   }
 }
 
+.navbar-collapse.collapse {
+  @include media-breakpoint-down(xl) {
+    width: 100%;
+    max-width: 100%;
+    min-height: 100vh;
+  }
+}
+
+.sat-navbar-nav {
+  @include media-breakpoint-down(xl) {
+    padding: 50px 0;
+    margin-top: 42px;
+    border: 1px solid $text-color;
+    border-left: none;
+    border-right: none;
+  }
+}
+
 .sat-nav-item {
-  padding-right: 50px;
+  padding-right: 55px;
+  position: relative;
 
   @include media-breakpoint-down(xxl) {
     padding-right: 20px;
+  }
+
+  @include media-breakpoint-down(xl) {
+    padding-right: 0;
+    min-height: 73px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &-line:after {
+      content: '';
+      @include line;
+      width: 34px;
+      position: absolute;
+      bottom: 0;
+      left: calc(50% - 17px);
+    }
+  }
+}
+
+.sat-nav-contacts {
+  margin-top: 40px;
+  min-height: 95px;
+}
+
+.sat-nav-left {
+  padding-top: 9px;
+  padding-right: 47px;
+  width: 260px;
+  border-right: 1px solid $text-color;
+
+  @include media-breakpoint-down(md) {
+    padding-left: 10px;
+    padding-right: 0;
+    width: 50%;
+  }
+}
+
+.sat-nav-right {
+  padding-top: 10px;
+  padding-left: 47px;
+  width: 260px;
+
+  @include media-breakpoint-down(md) {
+    width: 50%;
+  }
+}
+
+.sat-nav-txt1 {
+  @include text($font-size: 16px, $font-weight: $fw-light);
+  letter-spacing: 1px;
+
+  @include media-breakpoint-down(md) {
+    @include text($font-size: 10px, $font-weight: $fw-light);
+  }
+}
+
+.sat-nav-txt2 {
+  @include text($font-size: 17px, $font-weight: $fw-medium, $line-height: 1.27);
+
+  @include media-breakpoint-down(md) {
+    width: 140px;
+    @include text(
+      $font-size: 11px,
+      $font-weight: $fw-medium,
+      $line-height: 1.27
+    );
+  }
+}
+
+.sat-h-call-m {
+  @include button;
+  width: 40px;
+  aspect-ratio: 1 / 1;
+  background-image: url(../images/phone.svg);
+  background-position: center;
+  background-size: 25px;
+  background-repeat: no-repeat;
+
+  @include media-breakpoint-up(xl) {
+    display: none;
   }
 }
 
 .sat-h-group {
   display: flex;
+  align-items: flex-end;
   gap: 42px;
 
   @include media-breakpoint-down(xl) {
-    padding-top: 50px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 20px;
+    display: none;
   }
 }
 
@@ -243,11 +450,18 @@ video {
   width: 268px;
   height: 47px;
   @include text($font-size: 16px, $font-weight: $fw-bold);
+  letter-spacing: 1.2px;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: $color-red;
   border-radius: 40px;
+
+  @include media-breakpoint-down(xl) {
+    @include text($font-size: 12px, $font-weight: $fw-bold);
+    width: 225px;
+    height: 33px;
+  }
 }
 
 .sat-h-call {
@@ -257,6 +471,7 @@ video {
 .sat-h-label {
   @include text($font-size: 14px);
   max-width: 120px;
+  border-bottom: 1px solid $text-color;
 
   @include media-breakpoint-down(xl) {
     padding-left: 10px;
@@ -289,11 +504,21 @@ video {
 .sat-p-txt1 {
   @include text($font-size: 41px, $font-weight: $fw-bold);
   max-width: 777px;
+
+  @include media-breakpoint-down(sm) {
+    @include text($font-size: 25px, $font-weight: $fw-bold);
+    max-width: 350px;
+  }
 }
 
 .sat-p-txt2 {
   @include text($font-size: 20px, $line-height: 1.7);
   max-width: 894px;
+
+  @include media-breakpoint-down(sm) {
+    @include text($font-size: 14px);
+    max-width: 316px;
+  }
 }
 
 .sat-p-btn {
@@ -304,6 +529,12 @@ video {
   align-items: center;
   justify-content: center;
   border-radius: 40px;
+
+  @include media-breakpoint-down(sm) {
+    margin: 52px auto 0;
+
+    height: 44px;
+  }
 }
 
 .sat-p-group {

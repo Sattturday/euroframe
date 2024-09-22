@@ -15,97 +15,136 @@
           <source autoplay src="video/main-video.mp4" type="video/mp4" />
         </video>
       </div>
+
       <header class="header">
         <div class="container-fluid">
           <div class="row">
-            <div class="col-12">
-              <div class="row">
-                <nav class="navbar navbar-expand-xl" data-bs-theme="dark">
-                  <div class="col-3">
-                    <a
-                      class="navbar-brand link-light text-uppercase d-flex align-items-center"
-                      href="#"
-                    >
-                      <img
-                        src="./images/Logo.svg"
-                        alt="Logo"
-                        class="d-inline-block align-text-top img-fluid sat-logo"
-                      />
-                      <span class="ms-3 sat-h-txt1 fw-bold">Еврокаркас</span>
+            <nav
+              class="sat-navbar navbar navbar-expand-xl"
+              data-bs-theme="dark"
+            >
+              <button
+                class="navbar-toggler shadow-none py-2 px-0"
+                style="border: none !important"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarToggler"
+                aria-controls="navbarToggler"
+                aria-expanded="false"
+                aria-label="Переключатель навигации"
+              >
+                <span class="sat-burger">
+                  <span class="sat-burger-line"></span>
+                </span>
+              </button>
+              <div class="sat-h-container">
+                <a
+                  class="sat-brand navbar-brand link-light text-uppercase d-flex align-items-center"
+                  href="#"
+                >
+                  <img
+                    src="./images/Logo.svg"
+                    alt="Logo"
+                    class="sat-logo d-inline-block align-text-top img-fluid"
+                  />
+                  <span class="sat-h-txt1 ms-3 fw-bold">Еврокаркас</span>
+                </a>
+                <a href="#" class="sat-h-btn btn btn-danger d-xl-none">
+                  ЗАКАЗАТЬ ПРОЕКТ
+                </a>
+              </div>
+              <button
+                class="sat-h-call-m p-2"
+                type="button"
+                aria-label="Позвонить нам"
+              ></button>
+              <div
+                class="navbar-collapse collapse justify-content-between"
+                id="navbarToggler"
+              >
+                <ul class="sat-navbar-nav navbar-nav mb-2 mb-xl-0">
+                  <li class="sat-nav-item sat-nav-item-line nav-item">
+                    <a class="sat-h-txt2 link-light nav-link" href="#">
+                      О&nbsp;компании
                     </a>
-                  </div>
-                  <button
-                    class="navbar-toggler right"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarToggler"
-                    aria-controls="navbarToggler"
-                    aria-expanded="false"
-                    aria-label="Переключатель навигации"
-                  >
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="col-9">
-                    <div class="collapse navbar-collapse" id="navbarToggler">
-                      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item sat-nav-item">
-                          <a class="link-light nav-link sat-h-txt2" href="#"
-                            >О&nbsp;компании</a
-                          >
-                        </li>
-                        <li class="nav-item sat-nav-item">
-                          <a class="link-light nav-link sat-h-txt2" href="#"
-                            >Проекты</a
-                          >
-                        </li>
-                        <li class="nav-item sat-nav-item">
-                          <a class="link-light nav-link sat-h-txt2" href="#"
-                            >Услуги</a
-                          >
-                        </li>
-                        <li class="nav-item sat-nav-item">
-                          <a class="link-light nav-link sat-h-txt2" href="#"
-                            >Вакансии</a
-                          >
-                        </li>
-                        <li class="nav-item sat-nav-item">
-                          <a class="nav-link link-light sat-h-txt2" href="#"
-                            >Контакты</a
-                          >
-                        </li>
-                      </ul>
-                      <div class="sat-h-group">
-                        <a
-                          href="#"
-                          class="btn d-flex flex-xl-column flex-row align-items-end p-0"
-                        >
-                          <span class="sat-h-call"
-                            >+7&nbsp;917&nbsp;077&nbsp;04&nbsp;49</span
-                          >
-                          <span
-                            class="sat-h-label border-xl-bottom border-white"
-                          >
-                            Связаться&nbsp;с&nbsp;нами
-                          </span>
-                        </a>
-                        <a href="#" class="btn btn-danger sat-h-btn">
-                          ЗАКАЗАТЬ ПРОЕКТ
-                        </a>
-                      </div>
+                  </li>
+                  <li class="nav-item sat-nav-item-line sat-nav-item">
+                    <a class="sat-h-txt2 link-light nav-link" href="#">
+                      Проекты
+                    </a>
+                  </li>
+                  <li class="nav-item sat-nav-item-line sat-nav-item">
+                    <a class="sat-h-txt2 link-light nav-link" href="#">
+                      Услуги
+                    </a>
+                  </li>
+                  <li class="nav-item sat-nav-item-line sat-nav-item">
+                    <a class="sat-h-txt2 link-light nav-link" href="#">
+                      Вакансии
+                    </a>
+                  </li>
+                  <li class="nav-item sat-nav-item">
+                    <a class="sat-h-txt2 link-light nav-link" href="#">
+                      Контакты
+                    </a>
+                  </li>
+                </ul>
+                <div
+                  class="sat-nav-contacts d-flex justify-content-md-center d-xl-none"
+                >
+                  <div class="sat-nav-left col-6">
+                    <div class="sat-nav-contacts-item d-flex flex-column gap-2">
+                      <span class="sat-nav-txt1 text-uppercase">Наш адрес</span>
+                      <span class="sat-nav-txt2">
+                        Чебоксары, Московский&nbsp;пр-т, д. 14,
+                        помещение&nbsp;№8
+                      </span>
                     </div>
                   </div>
-                </nav>
+                  <div class="sat-nav-right col-6">
+                    <div class="sat-nav-contacts-item d-flex flex-column gap-1">
+                      <span class="sat-nav-txt1 text-uppercase">телефон</span>
+                      <span class="sat-nav-txt2">+7 917 077 04 49</span>
+                    </div>
+                    <div
+                      class="sat-nav-contacts-item d-flex flex-column gap-1 pt-2"
+                    >
+                      <span class="sat-nav-txt1 text-uppercase">E-mail</span>
+                      <span class="sat-nav-txt2 text-decoration-underline">
+                        psp.ek@mail.ru
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="sat-h-group">
+                  <a
+                    href="#"
+                    class="btn d-flex flex-xl-column flex-row align-items-end p-0"
+                  >
+                    <span class="sat-h-call"
+                      >+7&nbsp;917&nbsp;077&nbsp;04&nbsp;49</span
+                    >
+                    <span class="sat-h-label">
+                      Связаться&nbsp;с&nbsp;нами
+                    </span>
+                  </a>
+                  <a href="#" class="sat-h-btn btn btn-danger">
+                    ЗАКАЗАТЬ ПРОЕКТ
+                  </a>
+                </div>
               </div>
-            </div>
+            </nav>
           </div>
         </div>
       </header>
+
       <section class="sat-promo">
         <div class="container-fluid">
           <div class="row">
             <div class="col-xxl-7 col-xl-9 col-12 p-0">
               <h1 class="sat-p-txt1 pb-4">
-                Комплексное проектирование объектов капитального строительства
+                Комплексное проектирование объектов&nbsp;капитального
+                строительства
               </h1>
               <p class="sat-p-txt2 pb-4">
                 Компания специализируется на разработке проектно-сметной
@@ -117,7 +156,7 @@
                 Главное преимущество компании в проектировании — эффективный
                 экономичный каркас.
               </p>
-              <a href="#" class="btn btn-outline-light sat-p-btn"
+              <a href="#" class="sat-p-btn btn btn-outline-light"
                 >Бесплатная консультация</a
               >
             </div>
