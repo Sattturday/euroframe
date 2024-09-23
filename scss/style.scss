@@ -33,12 +33,10 @@ $fw-bold: 700;
   cursor: pointer;
 }
 
-@mixin text(
-  $color: $text-color,
+@mixin text($color: $text-color,
   $font-size: 18px,
   $font-weight: 400,
-  $line-height: normal
-) {
+  $line-height: normal) {
   margin: 0;
   padding: 0;
   color: $color;
@@ -134,15 +132,14 @@ footer {
     top: 0;
     left: 0;
     right: 0;
-    height: 460px; /* Высота градиента */
-    background: linear-gradient(
-      180deg,
-      $primary 25.66%,
-      rgba(66, 129, 181, 0) 100%
-    );
+    height: 460px;
+    /* Высота градиента */
+    background: linear-gradient(180deg,
+        $primary 25.66%,
+        rgba(66, 129, 181, 0) 100%);
   }
 
-  & > * {
+  &>* {
     position: relative;
     z-index: 3;
   }
@@ -184,7 +181,7 @@ footer {
     }
   }
 
-  & > * {
+  &>* {
     position: relative;
     z-index: 3;
   }
@@ -213,15 +210,22 @@ footer {
 }
 
 video {
-  position: absolute; /* Позволяет видео занимать весь фон */
+  position: absolute;
+  /* Позволяет видео занимать весь фон */
   top: 50%;
   left: 50%;
-  min-width: 100%; /* Минимальная ширина 100% */
-  min-height: 100%; /* Минимальная высота 100% */
-  width: auto; /* Автоматическая ширина */
-  height: auto; /* Автоматическая высота */
-  z-index: -1; /* Убедитесь, что видео находится под другими элементами */
-  transform: translate(-50%, -50%); /* Центрирует видео */
+  min-width: 100%;
+  /* Минимальная ширина 100% */
+  min-height: 100%;
+  /* Минимальная высота 100% */
+  width: auto;
+  /* Автоматическая ширина */
+  height: auto;
+  /* Автоматическая высота */
+  z-index: -1;
+  /* Убедитесь, что видео находится под другими элементами */
+  transform: translate(-50%, -50%);
+  /* Центрирует видео */
 }
 
 .header {
@@ -414,11 +418,9 @@ video {
 
   @include media-breakpoint-down(md) {
     width: 140px;
-    @include text(
-      $font-size: 11px,
+    @include text($font-size: 11px,
       $font-weight: $fw-medium,
-      $line-height: 1.27
-    );
+      $line-height: 1.27);
   }
 }
 
@@ -484,16 +486,12 @@ video {
   padding-top: 150px;
   padding-bottom: 170px;
 
-  @include media-breakpoint-down(xxl) {
-    padding-bottom: 300px;
-  }
-
   @include media-breakpoint-down(xl) {
     padding-top: 100px;
   }
 
   @include media-breakpoint-down(lg) {
-    padding-bottom: 550px;
+    padding-bottom: 123px;
   }
 
   @include media-breakpoint-down(sm) {
@@ -537,14 +535,99 @@ video {
   }
 }
 
-.sat-p-group {
-  width: 100%;
-  position: absolute;
-  bottom: -60px;
-  left: 0;
+// section about
+.sat-about {
+  padding-top: 205px;
+  padding-bottom: 43px;
+  position: relative;
+  background-image: url(../images/about.png);
+  background-size: 36%;
+  background-position: left bottom;
+  background-repeat: no-repeat;
+
+  @include media-breakpoint-down(xxl) {
+    padding-top: 250px;
+    background-position: left 32%;
+  }
+
+  @include media-breakpoint-down(lg) {
+    padding-top: 434px;
+    background-size: 75%;
+    background-position: -75px 44.8%;
+  }
 }
 
-.sat-p-list {
+.sat-a-txt1 {
+  @include text($font-size: 71px, $font-weight: $fw-light);
+  max-width: 440px;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  @include media-breakpoint-down(lg) {
+    max-width: 100%;
+  }
+
+  @include media-breakpoint-down(md) {
+    @include text($font-size: 41px, $font-weight: $fw-light, $line-height: 1.17);
+  }
+}
+
+.sat-a-txt2 {
+  @include text($font-size: 16px, $line-height: 1.81);
+  max-width: 748px;
+
+  &-1 {
+    padding-top: 133px;
+  }
+
+  @include media-breakpoint-down(xl) {
+    margin-left: auto;
+  }
+
+  @include media-breakpoint-down(md) {
+    @include text($font-size: 13px, $line-height: 1.76);
+
+    &-1 {
+      padding-top: 105px;
+    }
+  }
+}
+
+.sat-a-txt3 {
+  @include text($font-size: 76px, $font-weight: $fw-medium);
+  letter-spacing: -8.9px;
+
+  @include media-breakpoint-down(md) {
+    @include text($font-size: 50px, $font-weight: $fw-medium, $line-height: 1.5);
+    width: 80px;
+    text-align: right;
+  }
+}
+
+.sat-a-txt4 {
+  @include text($font-size: 20px, $font-weight: $fw-light, $line-height: 0.9);
+  max-width: 155px;
+
+  @include media-breakpoint-down(sm) {
+    @include text($font-size: 15px, $font-weight: $fw-light, $line-height: 0.93);
+    max-width: 100px;
+  }
+}
+
+.sat-a-group {
+  width: 100%;
+  position: absolute;
+  top: -60px;
+  left: 0;
+  z-index: 12;
+
+  @include media-breakpoint-down(sm) {
+    top: -50px;
+  }
+}
+
+.sat-a-cardlist {
   @include list;
 
   @include media-breakpoint-down(xxl) {
@@ -553,10 +636,11 @@ video {
 
   @include media-breakpoint-down(lg) {
     max-width: 410px;
+    gap: 21px !important;
   }
 }
 
-.sat-p-card {
+.sat-a-card {
   @include text($color: $secondary, $font-size: 17px, $font-weight: $fw-bold);
   width: 410px;
   height: 123px;
@@ -575,13 +659,17 @@ video {
     padding: 0 40px;
   }
 
-  @include media-breakpoint-down(sm) {
-    width: 320px;
+  @include media-breakpoint-down(xl) {
+    @include text($color: $secondary, $font-size: 16px, $font-weight: $fw-bold);
+    width: 356px;
+    height: 90px;
+
     &-1 {
-      padding: 0 60px;
+      padding: 0 70px;
     }
+
     &-2 {
-      padding: 0 40px;
+      padding: 0 24px;
     }
   }
 
@@ -589,69 +677,6 @@ video {
     white-space: normal;
     word-break: break-word;
     text-align: center;
-  }
-}
-
-// section About
-.sat-about {
-  padding-top: 205px;
-  padding-bottom: 43px;
-  background-image: url(../images/about.png);
-  background-size: 36%;
-  background-position: left bottom;
-  background-repeat: no-repeat;
-
-  @include media-breakpoint-down(xl) {
-    padding-top: 150px;
-    background-position: left 32%;
-  }
-
-  @include media-breakpoint-down(lg) {
-    background-size: 75%;
-    background-position: left 10%;
-  }
-}
-
-.sat-a-txt1 {
-  @include text($font-size: 71px, $font-weight: $fw-light);
-  max-width: 440px;
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  @include media-breakpoint-down(lg) {
-    max-width: 100%;
-  }
-
-  @include media-breakpoint-down(md) {
-    @include text($font-size: 50px, $font-weight: $fw-light);
-  }
-}
-
-.sat-a-txt2 {
-  @include text($font-size: 16px, $line-height: 1.81);
-  max-width: 748px;
-
-  &-1 {
-    padding-top: 133px;
-  }
-
-  @include media-breakpoint-down(xl) {
-    margin-left: auto;
-  }
-}
-
-.sat-a-txt3 {
-  @include text($font-size: 76px, $font-weight: $fw-medium);
-  letter-spacing: -8.9px;
-}
-
-.sat-a-txt4 {
-  @include text($font-size: 20px, $font-weight: $fw-light, $line-height: 0.9);
-  max-width: 155px;
-
-  @include media-breakpoint-down(sm) {
-    @include text($font-size: 16px, $font-weight: $fw-light, $line-height: 0.9);
   }
 }
 
@@ -668,8 +693,8 @@ video {
   }
 
   @include media-breakpoint-down(sm) {
-    margin-top: 20px;
-    padding: 20px 35px 0;
+    margin-top: 25px;
+    padding: 20px 20px 0;
   }
 }
 
@@ -697,6 +722,16 @@ video {
     background-image: url(../images/about-arrow.png);
     background-size: cover;
     background-repeat: no-repeat;
+  }
+
+  @include media-breakpoint-down(sm) {
+    @include text($font-size: 12px, $line-height: 1.66);
+    padding: 22px 18px;
+
+    &:after {
+      width: 46px;
+      height: 16px;
+    }
   }
 }
 
@@ -731,6 +766,7 @@ video {
   border: none;
   @include line($weight: 5px);
 }
+
 .nav-tabs .nav-link {
   border: none;
 }
@@ -740,7 +776,8 @@ video {
   padding-top: 78px;
   position: relative;
   overflow-x: hidden;
-  width: 100%; /* Ширина карусели */
+  width: 100%;
+  /* Ширина карусели */
 
   @include media-breakpoint-down(sm) {
     padding-top: 30px;
@@ -750,7 +787,8 @@ video {
 .sat-track {
   display: flex;
   flex-wrap: nowrap;
-  transition: transform 0.3s ease; /* Для анимации прокрутки */
+  transition: transform 0.3s ease;
+  /* Для анимации прокрутки */
 }
 
 .sat-navigation {
@@ -811,38 +849,30 @@ video {
   background-repeat: no-repeat;
 
   &-1 {
-    background: linear-gradient(
-        to bottom,
+    background: linear-gradient(to bottom,
         rgba(0, 49, 90, 0) calc(100% - 190px),
-        rgba(0, 49, 90, 0.86) 100%
-      ),
+        rgba(0, 49, 90, 0.86) 100%),
       url(../images/card-1.jpg);
   }
 
   &-2 {
-    background: linear-gradient(
-        to bottom,
+    background: linear-gradient(to bottom,
         rgba(0, 49, 90, 0) calc(100% - 190px),
-        rgba(0, 49, 90, 0.86) 100%
-      ),
+        rgba(0, 49, 90, 0.86) 100%),
       url(../images/card-2.jpg);
   }
 
   &-3 {
-    background: linear-gradient(
-        to bottom,
+    background: linear-gradient(to bottom,
         rgba(0, 49, 90, 0) calc(100% - 190px),
-        rgba(0, 49, 90, 0.86) 100%
-      ),
+        rgba(0, 49, 90, 0.86) 100%),
       url(../images/card-3.jpg);
   }
 
   &-4 {
-    background: linear-gradient(
-        to bottom,
+    background: linear-gradient(to bottom,
         rgba(0, 49, 90, 0) calc(100% - 190px),
-        rgba(0, 49, 90, 0.86) 100%
-      ),
+        rgba(0, 49, 90, 0.86) 100%),
       url(../images/card-4.jpg);
     background-position: 0 center;
   }
@@ -852,38 +882,30 @@ video {
     width: 360px;
 
     &-1 {
-      background: linear-gradient(
-          to bottom,
+      background: linear-gradient(to bottom,
           rgba(0, 49, 90, 0.3) calc(100% - 190px),
-          rgba(0, 49, 90, 1) 100%
-        ),
+          rgba(0, 49, 90, 1) 100%),
         url(../images/card-1.jpg);
     }
 
     &-2 {
-      background: linear-gradient(
-          to bottom,
+      background: linear-gradient(to bottom,
           rgba(0, 49, 90, 0.3) calc(100% - 190px),
-          rgba(0, 49, 90, 1) 100%
-        ),
+          rgba(0, 49, 90, 1) 100%),
         url(../images/card-2.jpg);
     }
 
     &-3 {
-      background: linear-gradient(
-          to bottom,
+      background: linear-gradient(to bottom,
           rgba(0, 49, 90, 0.3) calc(100% - 190px),
-          rgba(0, 49, 90, 1) 100%
-        ),
+          rgba(0, 49, 90, 1) 100%),
         url(../images/card-3.jpg);
     }
 
     &-4 {
-      background: linear-gradient(
-          to bottom,
+      background: linear-gradient(to bottom,
           rgba(0, 49, 90, 0.3) calc(100% - 190px),
-          rgba(0, 49, 90, 1) 100%
-        ),
+          rgba(0, 49, 90, 1) 100%),
         url(../images/card-4.jpg);
       background-position: 0 center;
     }
@@ -934,12 +956,10 @@ video {
 }
 
 .sat-m-txt2 {
-  @include text(
-    $color: $color-grey,
+  @include text($color: $color-grey,
     $font-size: 16px,
     $font-weight: $fw-light,
-    $line-height: 1.56
-  );
+    $line-height: 1.56);
   max-width: 536px;
 }
 
@@ -1011,7 +1031,8 @@ video {
   justify-content: space-between;
   gap: 20px;
   flex-wrap: nowrap;
-  transition: transform 0.3s ease; /* Для анимации прокрутки */
+  transition: transform 0.3s ease;
+  /* Для анимации прокрутки */
 }
 
 // form feedback

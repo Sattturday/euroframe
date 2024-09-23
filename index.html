@@ -1,260 +1,218 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Еврокаркас</title>
-    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="./css/fonts.css" />
-    <link rel="stylesheet" href="./css/style.css" />
-  </head>
-  <body>
-    <div class="sat-p-bg">
-      <div class="video">
-        <video height="100%" width="100%" autoplay muted preload loop>
-          <source autoplay src="video/main-video.mp4" type="video/mp4" />
-        </video>
-      </div>
 
-      <header class="header">
-        <div class="container-fluid">
-          <div class="row">
-            <nav
-              class="sat-navbar navbar navbar-expand-xl"
-              data-bs-theme="dark"
-            >
-              <button
-                class="navbar-toggler shadow-none py-2 px-0"
-                style="border: none !important"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarToggler"
-                aria-controls="navbarToggler"
-                aria-expanded="false"
-                aria-label="Переключатель навигации"
-              >
-                <span class="sat-burger">
-                  <span class="sat-burger-line"></span>
-                </span>
-              </button>
-              <div class="sat-h-container">
-                <a
-                  class="sat-brand navbar-brand link-light text-uppercase d-flex align-items-center"
-                  href="#"
-                >
-                  <img
-                    src="./images/Logo.svg"
-                    alt="Logo"
-                    class="sat-logo d-inline-block align-text-top img-fluid"
-                  />
-                  <span class="sat-h-txt1 ms-3 fw-bold">Еврокаркас</span>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Еврокаркас</title>
+  <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="./css/fonts.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+  <div class="sat-p-bg">
+    <div class="video">
+      <video height="100%" width="100%" autoplay muted preload loop>
+        <source autoplay src="video/main-video.mp4" type="video/mp4" />
+      </video>
+    </div>
+
+    <header class="header">
+      <div class="container-fluid">
+        <div class="row">
+          <nav class="sat-navbar navbar navbar-expand-xl" data-bs-theme="dark">
+            <button class="navbar-toggler shadow-none py-2 px-0" style="border: none !important" type="button"
+              data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler"
+              aria-expanded="false" aria-label="Переключатель навигации">
+              <span class="sat-burger">
+                <span class="sat-burger-line"></span>
+              </span>
+            </button>
+            <div class="sat-h-container">
+              <a class="sat-brand navbar-brand link-light text-uppercase d-flex align-items-center" href="#">
+                <img src="./images/Logo.svg" alt="Logo" class="sat-logo d-inline-block align-text-top img-fluid" />
+                <span class="sat-h-txt1 ms-3 fw-bold">Еврокаркас</span>
+              </a>
+              <a href="#" class="sat-h-btn btn btn-danger d-xl-none">
+                ЗАКАЗАТЬ ПРОЕКТ
+              </a>
+            </div>
+            <button class="sat-h-call-m p-2" type="button" aria-label="Позвонить нам"></button>
+            <div class="navbar-collapse collapse justify-content-between" id="navbarToggler">
+              <ul class="sat-navbar-nav navbar-nav mb-2 mb-xl-0">
+                <li class="sat-nav-item sat-nav-item-line nav-item">
+                  <a class="sat-h-txt2 link-light nav-link" href="#">
+                    О&nbsp;компании
+                  </a>
+                </li>
+                <li class="nav-item sat-nav-item-line sat-nav-item">
+                  <a class="sat-h-txt2 link-light nav-link" href="#">
+                    Проекты
+                  </a>
+                </li>
+                <li class="nav-item sat-nav-item-line sat-nav-item">
+                  <a class="sat-h-txt2 link-light nav-link" href="#">
+                    Услуги
+                  </a>
+                </li>
+                <li class="nav-item sat-nav-item-line sat-nav-item">
+                  <a class="sat-h-txt2 link-light nav-link" href="#">
+                    Вакансии
+                  </a>
+                </li>
+                <li class="nav-item sat-nav-item">
+                  <a class="sat-h-txt2 link-light nav-link" href="#">
+                    Контакты
+                  </a>
+                </li>
+              </ul>
+              <div class="sat-nav-contacts d-flex justify-content-md-center d-xl-none">
+                <div class="sat-nav-left col-6">
+                  <div class="sat-nav-contacts-item d-flex flex-column gap-2">
+                    <span class="sat-nav-txt1 text-uppercase">Наш адрес</span>
+                    <span class="sat-nav-txt2">
+                      Чебоксары, Московский&nbsp;пр-т, д. 14,
+                      помещение&nbsp;№8
+                    </span>
+                  </div>
+                </div>
+                <div class="sat-nav-right col-6">
+                  <div class="sat-nav-contacts-item d-flex flex-column gap-1">
+                    <span class="sat-nav-txt1 text-uppercase">телефон</span>
+                    <span class="sat-nav-txt2">+7 917 077 04 49</span>
+                  </div>
+                  <div class="sat-nav-contacts-item d-flex flex-column gap-1 pt-2">
+                    <span class="sat-nav-txt1 text-uppercase">E-mail</span>
+                    <span class="sat-nav-txt2 text-decoration-underline">
+                      psp.ek@mail.ru
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="sat-h-group">
+                <a href="#" class="btn d-flex flex-xl-column flex-row align-items-end p-0">
+                  <span class="sat-h-call">+7&nbsp;917&nbsp;077&nbsp;04&nbsp;49</span>
+                  <span class="sat-h-label">
+                    Связаться&nbsp;с&nbsp;нами
+                  </span>
                 </a>
-                <a href="#" class="sat-h-btn btn btn-danger d-xl-none">
+                <a href="#" class="sat-h-btn btn btn-danger">
                   ЗАКАЗАТЬ ПРОЕКТ
                 </a>
               </div>
-              <button
-                class="sat-h-call-m p-2"
-                type="button"
-                aria-label="Позвонить нам"
-              ></button>
-              <div
-                class="navbar-collapse collapse justify-content-between"
-                id="navbarToggler"
-              >
-                <ul class="sat-navbar-nav navbar-nav mb-2 mb-xl-0">
-                  <li class="sat-nav-item sat-nav-item-line nav-item">
-                    <a class="sat-h-txt2 link-light nav-link" href="#">
-                      О&nbsp;компании
-                    </a>
-                  </li>
-                  <li class="nav-item sat-nav-item-line sat-nav-item">
-                    <a class="sat-h-txt2 link-light nav-link" href="#">
-                      Проекты
-                    </a>
-                  </li>
-                  <li class="nav-item sat-nav-item-line sat-nav-item">
-                    <a class="sat-h-txt2 link-light nav-link" href="#">
-                      Услуги
-                    </a>
-                  </li>
-                  <li class="nav-item sat-nav-item-line sat-nav-item">
-                    <a class="sat-h-txt2 link-light nav-link" href="#">
-                      Вакансии
-                    </a>
-                  </li>
-                  <li class="nav-item sat-nav-item">
-                    <a class="sat-h-txt2 link-light nav-link" href="#">
-                      Контакты
-                    </a>
-                  </li>
-                </ul>
-                <div
-                  class="sat-nav-contacts d-flex justify-content-md-center d-xl-none"
-                >
-                  <div class="sat-nav-left col-6">
-                    <div class="sat-nav-contacts-item d-flex flex-column gap-2">
-                      <span class="sat-nav-txt1 text-uppercase">Наш адрес</span>
-                      <span class="sat-nav-txt2">
-                        Чебоксары, Московский&nbsp;пр-т, д. 14,
-                        помещение&nbsp;№8
-                      </span>
-                    </div>
-                  </div>
-                  <div class="sat-nav-right col-6">
-                    <div class="sat-nav-contacts-item d-flex flex-column gap-1">
-                      <span class="sat-nav-txt1 text-uppercase">телефон</span>
-                      <span class="sat-nav-txt2">+7 917 077 04 49</span>
-                    </div>
-                    <div
-                      class="sat-nav-contacts-item d-flex flex-column gap-1 pt-2"
-                    >
-                      <span class="sat-nav-txt1 text-uppercase">E-mail</span>
-                      <span class="sat-nav-txt2 text-decoration-underline">
-                        psp.ek@mail.ru
-                      </span>
-                    </div>
-                  </div>
-                </div>
-                <div class="sat-h-group">
-                  <a
-                    href="#"
-                    class="btn d-flex flex-xl-column flex-row align-items-end p-0"
-                  >
-                    <span class="sat-h-call"
-                      >+7&nbsp;917&nbsp;077&nbsp;04&nbsp;49</span
-                    >
-                    <span class="sat-h-label">
-                      Связаться&nbsp;с&nbsp;нами
-                    </span>
-                  </a>
-                  <a href="#" class="sat-h-btn btn btn-danger">
-                    ЗАКАЗАТЬ ПРОЕКТ
-                  </a>
-                </div>
-              </div>
-            </nav>
-          </div>
+            </div>
+          </nav>
         </div>
-      </header>
+      </div>
+    </header>
 
-      <section class="sat-promo">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-xxl-7 col-xl-9 col-12 p-0">
-              <h1 class="sat-p-txt1 pb-4">
-                Комплексное проектирование объектов&nbsp;капитального
-                строительства
-              </h1>
-              <p class="sat-p-txt2 pb-4">
-                Компания специализируется на разработке проектно-сметной
-                документации всех типов жилых домов, торгово-офисных и
-                промышленных зданий, многофункциональных центров на современном
-                уровне.
-              </p>
-              <p class="sat-p-txt2 pb-4">
-                Главное преимущество компании в проектировании — эффективный
-                экономичный каркас.
-              </p>
-              <a href="#" class="sat-p-btn btn btn-outline-light"
-                >Бесплатная консультация</a
-              >
-            </div>
-            <div class="d-flex justify-content-center sat-p-group">
-              <ul
-                class="sat-p-list d-flex gap-3 flex-wrap justify-content-center text-uppercase"
-              >
-                <li class="sat-shadow-wrap">
-                  <div class="sat-p-card sat-p-card-1">
-                    <span>Большой опыт в&nbsp;проектировании</span>
-                  </div>
-                </li>
-                <li class="sat-shadow-wrap">
-                  <div class="sat-p-card sat-p-card-1">
-                    <span>Передовые технические решения</span>
-                  </div>
-                </li>
-                <li class="sat-shadow-wrap">
-                  <div class="sat-p-card sat-p-card-2">
-                    <span>
-                      Наш каркас на 27% экономичнее других видов каркаса
-                    </span>
-                  </div>
-                </li>
-                <li class="sat-shadow-wrap">
-                  <div class="sat-p-card sat-p-card-2">
-                    <span>
-                      Надежность подтвержденная международными сертификатами
-                    </span>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-    <!-- 
-    <section class="sat-about">
+    <section class="sat-promo">
       <div class="container-fluid">
-        <div
-          class="row justify-content-xl-end justify-content-center position-relative"
-        >
-          <div class="sat-a-col col-12 col-xl-6 p-0 pe-3">
-            <h2 class="sat-a-txt1">Многолетний опыт</h2>
-            <p class="sat-a-txt2 sat-a-txt2-1 pb-4">
-              Имея большой опыт работы в строительстве и проектировании,
-              специалисты разработали и освоили «Новый» тип сборно-монолитного
-              каркаса, который получил название «Еврокаркас», подтверждается
-              патентом №96589 от 10 августа 2010г. Одним из разработчиков
-              данного вида каркаса руководитель ООО «ПСП»ЕВРОКАРКАС».
+        <div class="row">
+          <div class="col-xxl-7 col-xl-9 col-12 p-0">
+            <h1 class="sat-p-txt1 pb-4">
+              Комплексное проектирование объектов&nbsp;капитального
+              строительства
+            </h1>
+            <p class="sat-p-txt2 pb-4">
+              Компания специализируется на разработке проектно-сметной
+              документации всех типов жилых домов, торгово-офисных и
+              промышленных зданий, многофункциональных центров на современном
+              уровне.
             </p>
-            <p class="sat-a-txt2 pb-4">
-              Сборно-монолитный каркас здания вписывается в любые
-              архитектурно-планировочные решения предусмотренные авторами
-              проектов зданий.
+            <p class="sat-p-txt2 pb-4">
+              Главное преимущество компании в проектировании — эффективный
+              экономичный каркас.
             </p>
-            <p class="sat-a-txt2 pb-4">
-              Эффективность сборно-монолитного каркаса на основе применения
-              вертикальных несущих элементов из сборных железобетонных изделий
-              заводского изготовления и горизонтальных элементов монолитного
-              перекрытия, консольных второстепенных и основных балок, капителей,
-              подтверждается результатами успешно реализованных проектов.
-            </p>
-            <p class="sat-a-txt2 pb-4">
-              Специалисты ООО «ПСП «ЕВРОКАРКАС» отвечают за качество каждого
-              проекта, вкладывают свой опыт и знания в обеспечение надёжности и
-              безопасности объектов, построенных по нашим проектам.
-            </p>
-          </div>
-          <div class="col sat-a-info">
-            <ul class="sat-a-list">
-              <li
-                class="d-flex justify-content-start align-items-center gap-sm-5 gap-4"
-              >
-                <span class="sat-a-txt3">20+</span>
-                <p class="sat-a-txt4">лет опыт работы</p>
-              </li>
-              <li
-                class="d-flex justify-content-start align-items-center gap-sm-5 gap-4"
-              >
-                <span class="sat-a-txt3">90+</span>
-                <p class="sat-a-txt4">реализованных проектов</p>
-              </li>
-              <li
-                class="d-flex justify-content-start align-items-center gap-sm-5 gap-4"
-              >
-                <span class="sat-a-txt3 ps-5 pb-3">14</span>
-                <p class="sat-a-txt4">профессионалов в команде</p>
-              </li>
-            </ul>
-            <a href="#" class="sat-a-link">
-              <span class="border-bottom border-light">СМОТРЕТЬ ПРОЕКТЫ</span>
-            </a>
+            <a href="#" class="sat-p-btn btn btn-outline-light">Бесплатная консультация</a>
           </div>
         </div>
       </div>
     </section>
+  </div>
+
+  <section class="sat-about">
+    <div class="sat-a-group d-flex justify-content-center ">
+      <ul class="sat-a-cardlist d-flex gap-3 flex-wrap justify-content-center text-uppercase">
+        <li class="sat-shadow-wrap">
+          <div class="sat-a-card sat-a-card-1">
+            <span>Большой опыт в&nbsp;проектировании</span>
+          </div>
+        </li>
+        <li class="sat-shadow-wrap">
+          <div class="sat-a-card sat-a-card-1">
+            <span>Передовые технические решения</span>
+          </div>
+        </li>
+        <li class="sat-shadow-wrap">
+          <div class="sat-a-card sat-a-card-2">
+            <span>
+              Наш каркас на 27% экономичнее других видов каркаса
+            </span>
+          </div>
+        </li>
+        <li class="sat-shadow-wrap">
+          <div class="sat-a-card sat-a-card-2">
+            <span>
+              Надежность подтвержденная международными&nbsp;сертификатами
+            </span>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="container-fluid">
+      <div class="row justify-content-xl-end justify-content-center position-relative">
+        <div class="sat-a-col col-12 col-xl-6 p-0 pe-md-3">
+          <h2 class="sat-a-txt1">Многолетний опыт</h2>
+          <p class="sat-a-txt2 sat-a-txt2-1 pb-4">
+            Имея большой опыт работы в строительстве и проектировании,
+            специалисты разработали и освоили «Новый» тип сборно-монолитного
+            каркаса, который получил название «Еврокаркас», подтверждается
+            патентом №96589 от 10 августа 2010г. Одним из разработчиков
+            данного вида каркаса руководитель ООО «ПСП»ЕВРОКАРКАС».
+          </p>
+          <p class="sat-a-txt2 pb-4">
+            Сборно-монолитный каркас здания вписывается в любые
+            архитектурно-планировочные решения предусмотренные авторами
+            проектов зданий.
+          </p>
+          <p class="sat-a-txt2 pb-4">
+            Эффективность сборно-монолитного каркаса на основе применения
+            вертикальных несущих элементов из сборных железобетонных изделий
+            заводского изготовления и горизонтальных элементов монолитного
+            перекрытия, консольных второстепенных и основных балок, капителей,
+            подтверждается результатами успешно реализованных проектов.
+          </p>
+          <p class="sat-a-txt2 pb-4">
+            Специалисты ООО «ПСП «ЕВРОКАРКАС» отвечают за качество каждого
+            проекта, вкладывают свой опыт и знания в обеспечение надёжности и
+            безопасности объектов, построенных по нашим проектам.
+          </p>
+        </div>
+        <div class="col sat-a-info">
+          <ul class="sat-a-list">
+            <li class="d-flex justify-content-start align-items-center gap-sm-5 gap-4">
+              <span class="sat-a-txt3">20+</span>
+              <p class="sat-a-txt4">лет опыт работы</p>
+            </li>
+            <li class="d-flex justify-content-start align-items-center gap-sm-5 gap-4">
+              <span class="sat-a-txt3">90+</span>
+              <p class="sat-a-txt4">реализованных проектов</p>
+            </li>
+            <li class="d-flex justify-content-start align-items-center gap-sm-5 gap-4">
+              <span class="sat-a-txt3 pb-sm-3 pb-2">14</span>
+              <p class="sat-a-txt4">профессионалов в&nbsp;команде</p>
+            </li>
+          </ul>
+          <a href="#" class="sat-a-link">
+            <span class="border-bottom border-light">СМОТРЕТЬ ПРОЕКТЫ</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- 
     <div class="sat-pr-m-wrap">
       <section class="sat-projects">
         <div class="container-fluid">
@@ -655,7 +613,8 @@
         </div>
       </div>
     </footer> -->
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/script.js"></script>
-  </body>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
 </html>

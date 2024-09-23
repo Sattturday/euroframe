@@ -11914,7 +11914,8 @@ footer {
   top: 0;
   left: 0;
   right: 0;
-  height: 460px; /* Высота градиента */
+  height: 460px;
+  /* Высота градиента */
   background: linear-gradient(180deg, #4281b5 25.66%, rgba(66, 129, 181, 0) 100%);
 }
 .sat-pr-m-wrap > * {
@@ -11983,15 +11984,22 @@ footer {
 }
 
 video {
-  position: absolute; /* Позволяет видео занимать весь фон */
+  position: absolute;
+  /* Позволяет видео занимать весь фон */
   top: 50%;
   left: 50%;
-  min-width: 100%; /* Минимальная ширина 100% */
-  min-height: 100%; /* Минимальная высота 100% */
-  width: auto; /* Автоматическая ширина */
-  height: auto; /* Автоматическая высота */
-  z-index: -1; /* Убедитесь, что видео находится под другими элементами */
-  transform: translate(-50%, -50%); /* Центрирует видео */
+  min-width: 100%;
+  /* Минимальная ширина 100% */
+  min-height: 100%;
+  /* Минимальная высота 100% */
+  width: auto;
+  /* Автоматическая ширина */
+  height: auto;
+  /* Автоматическая высота */
+  z-index: -1;
+  /* Убедитесь, что видео находится под другими элементами */
+  transform: translate(-50%, -50%);
+  /* Центрирует видео */
 }
 
 .header {
@@ -12342,11 +12350,6 @@ video {
   padding-top: 150px;
   padding-bottom: 170px;
 }
-@media (max-width: 1799.98px) {
-  .sat-promo {
-    padding-bottom: 300px;
-  }
-}
 @media (max-width: 1599.98px) {
   .sat-promo {
     padding-top: 100px;
@@ -12354,7 +12357,7 @@ video {
 }
 @media (max-width: 991.98px) {
   .sat-promo {
-    padding-bottom: 550px;
+    padding-bottom: 123px;
   }
 }
 @media (max-width: 575.98px) {
@@ -12426,86 +12429,26 @@ video {
   }
 }
 
-.sat-p-group {
-  width: 100%;
-  position: absolute;
-  bottom: -60px;
-  left: 0;
-}
-
-.sat-p-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-@media (max-width: 1799.98px) {
-  .sat-p-list {
-    max-width: 840px;
-  }
-}
-@media (max-width: 991.98px) {
-  .sat-p-list {
-    max-width: 410px;
-  }
-}
-
-.sat-p-card {
-  margin: 0;
-  padding: 0;
-  color: #00315a;
-  font-size: 17px;
-  font-weight: 700;
-  line-height: normal;
-  width: 410px;
-  height: 123px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #fff;
-  box-shadow: 0px -21px 23px 0px rgba(66, 129, 181, 0.58) inset;
-  border-radius: 20px;
-}
-.sat-p-card-1 {
-  padding: 0 60px;
-}
-.sat-p-card-2 {
-  padding: 0 40px;
-}
-@media (max-width: 575.98px) {
-  .sat-p-card {
-    width: 320px;
-  }
-  .sat-p-card-1 {
-    padding: 0 60px;
-  }
-  .sat-p-card-2 {
-    padding: 0 40px;
-  }
-}
-.sat-p-card span {
-  white-space: normal;
-  word-break: break-word;
-  text-align: center;
-}
-
 .sat-about {
   padding-top: 205px;
   padding-bottom: 43px;
+  position: relative;
   background-image: url(../images/about.png);
   background-size: 36%;
   background-position: left bottom;
   background-repeat: no-repeat;
 }
-@media (max-width: 1599.98px) {
+@media (max-width: 1799.98px) {
   .sat-about {
-    padding-top: 150px;
+    padding-top: 250px;
     background-position: left 32%;
   }
 }
 @media (max-width: 991.98px) {
   .sat-about {
+    padding-top: 434px;
     background-size: 75%;
-    background-position: left 10%;
+    background-position: -75px 44.8%;
   }
 }
 
@@ -12531,9 +12474,9 @@ video {
     margin: 0;
     padding: 0;
     color: #fff;
-    font-size: 50px;
+    font-size: 41px;
     font-weight: 300;
-    line-height: normal;
+    line-height: 1.17;
   }
 }
 
@@ -12554,6 +12497,19 @@ video {
     margin-left: auto;
   }
 }
+@media (max-width: 767.98px) {
+  .sat-a-txt2 {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.76;
+  }
+  .sat-a-txt2-1 {
+    padding-top: 105px;
+  }
+}
 
 .sat-a-txt3 {
   margin: 0;
@@ -12563,6 +12519,18 @@ video {
   font-weight: 500;
   line-height: normal;
   letter-spacing: -8.9px;
+}
+@media (max-width: 767.98px) {
+  .sat-a-txt3 {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-size: 50px;
+    font-weight: 500;
+    line-height: 1.5;
+    width: 80px;
+    text-align: right;
+  }
 }
 
 .sat-a-txt4 {
@@ -12579,10 +12547,87 @@ video {
     margin: 0;
     padding: 0;
     color: #fff;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 300;
-    line-height: 0.9;
+    line-height: 0.93;
+    max-width: 100px;
   }
+}
+
+.sat-a-group {
+  width: 100%;
+  position: absolute;
+  top: -60px;
+  left: 0;
+  z-index: 12;
+}
+@media (max-width: 575.98px) {
+  .sat-a-group {
+    top: -50px;
+  }
+}
+
+.sat-a-cardlist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+@media (max-width: 1799.98px) {
+  .sat-a-cardlist {
+    max-width: 840px;
+  }
+}
+@media (max-width: 991.98px) {
+  .sat-a-cardlist {
+    max-width: 410px;
+    gap: 21px !important;
+  }
+}
+
+.sat-a-card {
+  margin: 0;
+  padding: 0;
+  color: #00315a;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: normal;
+  width: 410px;
+  height: 123px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  box-shadow: 0px -21px 23px 0px rgba(66, 129, 181, 0.58) inset;
+  border-radius: 20px;
+}
+.sat-a-card-1 {
+  padding: 0 60px;
+}
+.sat-a-card-2 {
+  padding: 0 40px;
+}
+@media (max-width: 1599.98px) {
+  .sat-a-card {
+    margin: 0;
+    padding: 0;
+    color: #00315a;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: normal;
+    width: 356px;
+    height: 90px;
+  }
+  .sat-a-card-1 {
+    padding: 0 70px;
+  }
+  .sat-a-card-2 {
+    padding: 0 24px;
+  }
+}
+.sat-a-card span {
+  white-space: normal;
+  word-break: break-word;
+  text-align: center;
 }
 
 .sat-a-info {
@@ -12600,8 +12645,8 @@ video {
 }
 @media (max-width: 575.98px) {
   .sat-a-info {
-    margin-top: 20px;
-    padding: 20px 35px 0;
+    margin-top: 25px;
+    padding: 20px 20px 0;
   }
 }
 
@@ -12637,6 +12682,21 @@ video {
   background-image: url(../images/about-arrow.png);
   background-size: cover;
   background-repeat: no-repeat;
+}
+@media (max-width: 575.98px) {
+  .sat-a-link {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.66;
+    padding: 22px 18px;
+  }
+  .sat-a-link:after {
+    width: 46px;
+    height: 16px;
+  }
 }
 
 .sat-projects {
@@ -12699,7 +12759,8 @@ video {
   padding-top: 78px;
   position: relative;
   overflow-x: hidden;
-  width: 100%; /* Ширина карусели */
+  width: 100%;
+  /* Ширина карусели */
 }
 @media (max-width: 575.98px) {
   .sat-carousel {
@@ -12710,7 +12771,8 @@ video {
 .sat-track {
   display: flex;
   flex-wrap: nowrap;
-  transition: transform 0.3s ease; /* Для анимации прокрутки */
+  transition: transform 0.3s ease;
+  /* Для анимации прокрутки */
 }
 
 .sat-navigation {
@@ -12954,7 +13016,8 @@ video {
   justify-content: space-between;
   gap: 20px;
   flex-wrap: nowrap;
-  transition: transform 0.3s ease; /* Для анимации прокрутки */
+  transition: transform 0.3s ease;
+  /* Для анимации прокрутки */
 }
 
 .sat-form {
