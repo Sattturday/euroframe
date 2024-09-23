@@ -125,6 +125,7 @@ footer {
   position: relative;
   background-image: url(../images/projects-bg.png);
   background-position: bottom;
+  background-size: 100%;
 
   &:before {
     content: '';
@@ -137,11 +138,19 @@ footer {
     background: linear-gradient(180deg,
         $primary 25.66%,
         rgba(66, 129, 181, 0) 100%);
+
+    @include media-breakpoint-down(sm) {
+      height: 256px;
+    }
   }
 
   &>* {
     position: relative;
     z-index: 3;
+  }
+
+  @include media-breakpoint-down(md) {
+    background-size: 200%;
   }
 }
 
@@ -739,10 +748,20 @@ video {
 .sat-projects {
   padding-top: 70px;
   padding-right: 0;
+
+  @include media-breakpoint-down(sm) {
+    padding-top: 35px;
+  }
 }
 
 .sat-pr-txt1 {
   @include text($font-size: 36px);
+  padding-bottom: 48px;
+
+  @include media-breakpoint-down(sm) {
+    @include text($font-size: 24px);
+    padding-bottom: 24px;
+  }
 }
 
 // projects navigation
@@ -757,7 +776,7 @@ video {
 
   @include media-breakpoint-down(sm) {
     @include text($font-size: 14px, $font-weight: $fw-light);
-    padding: 4px 4px;
+    padding: 8px 6px;
   }
 }
 
@@ -780,7 +799,7 @@ video {
   /* Ширина карусели */
 
   @include media-breakpoint-down(sm) {
-    padding-top: 30px;
+    padding-top: 40px;
   }
 }
 
@@ -802,6 +821,7 @@ video {
 
   @include media-breakpoint-down(sm) {
     margin-top: 30px;
+    margin-right: 0;
   }
 }
 
@@ -912,12 +932,16 @@ video {
   }
 
   @include media-breakpoint-down(sm) {
-    width: 280px;
+    width: 270px;
   }
 }
 
 .sat-title {
   @include text($font-size: 20px, $font-weight: $fw-bold);
+
+  @include media-breakpoint-down(sm) {
+    @include text($font-size: 13px, $font-weight: $fw-bold);
+  }
 }
 
 .sat-description {
@@ -927,19 +951,36 @@ video {
   @include media-breakpoint-down(md) {
     min-height: 80px;
   }
+
+  @include media-breakpoint-down(sm) {
+    @include text($font-size: 10px, $line-height: 1.1);
+    min-height: 52px;
+  }
 }
 
 // section mission
 .sat-mission {
   padding-top: 160px;
+
+  @include media-breakpoint-down(sm) {
+    padding-top: 70px;
+  }
 }
 
 .sat-m-list {
   margin-bottom: -300px;
+
+  @include media-breakpoint-down(lg) {
+    margin-bottom: -417px;
+  }
 }
 
 .sat-m-list-group {
   border-radius: 0px;
+
+  @include media-breakpoint-down(lg) {
+    align-items: center;
+  }
 }
 
 .sat-list-group-item {
@@ -948,11 +989,27 @@ video {
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  @include media-breakpoint-down(md) {
+    padding-left: 20px;
+    max-width: 500px;
+    min-height: 104px;
+  }
 }
 
 .sat-m-txt1 {
   @include text($color: $primary, $font-size: 36px);
   padding-bottom: 14px;
+
+  @include media-breakpoint-down(lg) {
+    @include text($color: $primary, $font-size: 24px);
+    padding-bottom: 8px;
+  }
+
+  @include media-breakpoint-down(md) {
+    @include text($color: $primary, $font-size: 16px);
+    padding-bottom: 4px;
+  }
 }
 
 .sat-m-txt2 {
@@ -961,6 +1018,15 @@ video {
     $font-weight: $fw-light,
     $line-height: 1.56);
   max-width: 536px;
+
+
+  @include media-breakpoint-down(md) {
+    @include text($color: $color-grey,
+      $font-size: 12px,
+      $font-weight: $fw-light,
+      $line-height: 1.41);
+    max-width: 300px;
+  }
 }
 
 // section clients
