@@ -11928,7 +11928,7 @@ footer {
   position: relative;
   z-index: 3;
 }
-@media (max-width: 767.98px) {
+@media (max-width: 991.98px) {
   .sat-pr-m-wrap {
     background-size: 200%;
   }
@@ -12977,6 +12977,11 @@ video {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+@media (max-width: 991.98px) {
+  .sat-list-group-item {
+    padding-left: 40px;
+  }
 }
 @media (max-width: 767.98px) {
   .sat-list-group-item {

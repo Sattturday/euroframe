@@ -149,7 +149,7 @@ footer {
     z-index: 3;
   }
 
-  @include media-breakpoint-down(md) {
+  @include media-breakpoint-down(lg) {
     background-size: 200%;
   }
 }
@@ -989,6 +989,10 @@ video {
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  @include media-breakpoint-down(lg) {
+    padding-left: 40px;
+  }
 
   @include media-breakpoint-down(md) {
     padding-left: 20px;
