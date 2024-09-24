@@ -754,7 +754,7 @@ progress {
     max-width: 720px;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 1100px) {
   .container-lg, .container-md, .container-sm, .container {
     max-width: 960px;
   }
@@ -773,7 +773,7 @@ progress {
   --bs-breakpoint-xs: 0;
   --bs-breakpoint-sm: 576px;
   --bs-breakpoint-md: 768px;
-  --bs-breakpoint-lg: 992px;
+  --bs-breakpoint-lg: 1100px;
   --bs-breakpoint-xl: 1600px;
   --bs-breakpoint-xxl: 1800px;
 }
@@ -1342,7 +1342,7 @@ progress {
     --bs-gutter-y: 3rem;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 1100px) {
   .col-lg {
     flex: 1 0 0%;
   }
@@ -2058,7 +2058,7 @@ progress {
     -webkit-overflow-scrolling: touch;
   }
 }
-@media (max-width: 991.98px) {
+@media (max-width: 1099.98px) {
   .table-responsive-lg {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
@@ -3434,7 +3434,7 @@ textarea.form-control-lg {
     left: auto;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 1100px) {
   .dropdown-menu-lg-start {
     --bs-position: start;
   }
@@ -4088,7 +4088,7 @@ textarea.form-control-lg {
     overflow-y: visible;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 1100px) {
   .navbar-expand-lg {
     flex-wrap: nowrap;
     justify-content: flex-start;
@@ -5083,7 +5083,7 @@ textarea.form-control-lg {
     border-left-width: var(--bs-list-group-border-width);
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 1100px) {
   .list-group-horizontal-lg {
     flex-direction: row;
   }
@@ -5540,7 +5540,7 @@ textarea.form-control-lg {
     --bs-modal-width: 300px;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 1100px) {
   .modal-lg,
   .modal-xl {
     --bs-modal-width: 800px;
@@ -5610,7 +5610,7 @@ textarea.form-control-lg {
     overflow-y: auto;
   }
 }
-@media (max-width: 991.98px) {
+@media (max-width: 1099.98px) {
   .modal-fullscreen-lg-down {
     width: 100vw;
     max-width: none;
@@ -6368,7 +6368,7 @@ textarea.form-control-lg {
   }
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: 1099.98px) {
   .offcanvas-lg {
     position: fixed;
     bottom: 0;
@@ -6384,12 +6384,12 @@ textarea.form-control-lg {
     transition: var(--bs-offcanvas-transition);
   }
 }
-@media (max-width: 991.98px) and (prefers-reduced-motion: reduce) {
+@media (max-width: 1099.98px) and (prefers-reduced-motion: reduce) {
   .offcanvas-lg {
     transition: none;
   }
 }
-@media (max-width: 991.98px) {
+@media (max-width: 1099.98px) {
   .offcanvas-lg.offcanvas-start {
     top: 0;
     left: 0;
@@ -6428,7 +6428,7 @@ textarea.form-control-lg {
     visibility: visible;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 1100px) {
   .offcanvas-lg {
     --bs-offcanvas-height: auto;
     --bs-offcanvas-border-width: 0;
@@ -6983,7 +6983,7 @@ textarea.form-control-lg {
     z-index: 1020;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 1100px) {
   .sticky-lg-top {
     position: sticky;
     top: 0;
@@ -10146,7 +10146,7 @@ textarea.form-control-lg {
     text-align: center !important;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 1100px) {
   .float-lg-start {
     float: left !important;
   }
@@ -11928,7 +11928,7 @@ footer {
   position: relative;
   z-index: 3;
 }
-@media (max-width: 991.98px) {
+@media (max-width: 1099.98px) {
   .sat-pr-m-wrap {
     background-size: 200%;
   }
@@ -11960,7 +11960,7 @@ footer {
   background-repeat: no-repeat;
   z-index: 2;
 }
-@media (max-width: 991.98px) {
+@media (max-width: 1099.98px) {
   .sat-p-bg:after {
     height: 50%;
   }
@@ -12366,7 +12366,7 @@ video {
     padding-top: 100px;
   }
 }
-@media (max-width: 991.98px) {
+@media (max-width: 1099.98px) {
   .sat-promo {
     padding-bottom: 123px;
   }
@@ -12455,7 +12455,7 @@ video {
     background-position: left 32%;
   }
 }
-@media (max-width: 991.98px) {
+@media (max-width: 1099.98px) {
   .sat-about {
     padding-top: 434px;
     background-size: 75%;
@@ -12475,7 +12475,7 @@ video {
   top: 0;
   left: 0;
 }
-@media (max-width: 991.98px) {
+@media (max-width: 1099.98px) {
   .sat-a-txt1 {
     max-width: 100%;
   }
@@ -12588,7 +12588,7 @@ video {
     max-width: 840px;
   }
 }
-@media (max-width: 991.98px) {
+@media (max-width: 1099.98px) {
   .sat-a-cardlist {
     max-width: 410px;
     gap: 21px !important;
@@ -12956,7 +12956,7 @@ video {
 .sat-m-list {
   margin-bottom: -300px;
 }
-@media (max-width: 991.98px) {
+@media (max-width: 1099.98px) {
   .sat-m-list {
     margin-bottom: -417px;
   }
@@ -12965,7 +12965,7 @@ video {
 .sat-m-list-group {
   border-radius: 0px;
 }
-@media (max-width: 991.98px) {
+@media (max-width: 1099.98px) {
   .sat-m-list-group {
     align-items: center;
   }
@@ -12977,11 +12977,6 @@ video {
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-@media (max-width: 991.98px) {
-  .sat-list-group-item {
-    padding-left: 40px;
-  }
 }
 @media (max-width: 767.98px) {
   .sat-list-group-item {
@@ -13000,7 +12995,7 @@ video {
   line-height: normal;
   padding-bottom: 14px;
 }
-@media (max-width: 991.98px) {
+@media (max-width: 1099.98px) {
   .sat-m-txt1 {
     margin: 0;
     padding: 0;
@@ -13049,6 +13044,11 @@ video {
   padding-bottom: 78px;
   background-color: #e4e9ee;
 }
+@media (max-width: 1099.98px) {
+  .sat-clients {
+    padding-top: 475px;
+  }
+}
 
 .sat-c-txt1 {
   margin: 0;
@@ -13058,6 +13058,17 @@ video {
   font-weight: 400;
   line-height: normal;
   padding-bottom: 50px;
+}
+@media (max-width: 575.98px) {
+  .sat-c-txt1 {
+    margin: 0;
+    padding: 0;
+    color: #4281b5;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: normal;
+    padding-bottom: 24px;
+  }
 }
 
 .sat-c-list {
@@ -13074,10 +13085,45 @@ video {
 .sat-c-list-3 {
   padding: 0 100px 0 120px;
 }
+@media (max-width: 1599.98px) {
+  .sat-c-list {
+    padding: 0;
+    margin: auto;
+    justify-content: center;
+    gap: 50px;
+  }
+}
+@media (max-width: 1099.98px) {
+  .sat-c-list {
+    max-width: 650px;
+  }
+}
+@media (max-width: 767.98px) {
+  .sat-c-list {
+    gap: 20px;
+  }
+}
 
 .sat-c-item {
   opacity: 0.5;
   mix-blend-mode: luminosity;
+}
+@media (max-width: 767.98px) {
+  .sat-c-item {
+    max-width: 30%;
+  }
+  .sat-c-item-m {
+    max-width: 20%;
+  }
+  .sat-c-item-s {
+    max-width: 15%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .sat-c-img {
+    width: 100%;
+  }
 }
 
 .sat-feedback {

@@ -12,7 +12,7 @@ $grid-breakpoints: (
   xs: 0,
   sm: 576px,
   md: 768px,
-  lg: 992px,
+  lg: 1100px,
   xl: 1600px,
   xxl: 1800px,
 );
@@ -990,10 +990,6 @@ video {
   flex-direction: column;
   justify-content: center;
 
-  @include media-breakpoint-down(lg) {
-    padding-left: 40px;
-  }
-
   @include media-breakpoint-down(md) {
     padding-left: 20px;
     max-width: 500px;
@@ -1038,11 +1034,20 @@ video {
   padding-top: 395px;
   padding-bottom: 78px;
   background-color: $bg-grey;
+
+  @include media-breakpoint-down(lg) {
+    padding-top: 475px;
+  }
 }
 
 .sat-c-txt1 {
   @include text($color: $primary, $font-size: 36px);
   padding-bottom: 50px;
+
+  @include media-breakpoint-down(sm) {
+    @include text($color: $primary, $font-size: 24px);
+    padding-bottom: 24px;
+  }
 }
 
 .sat-c-list {
@@ -1057,11 +1062,44 @@ video {
   &-3 {
     padding: 0 100px 0 120px;
   }
+
+  @include media-breakpoint-down(xl) {
+    padding: 0;
+    margin: auto;
+    justify-content: center;
+    gap: 50px;
+  }
+
+  @include media-breakpoint-down(lg) {
+    max-width: 650px;
+  }
+
+  @include media-breakpoint-down(md) {
+    gap: 20px;
+  }
 }
 
 .sat-c-item {
   opacity: 0.5;
   mix-blend-mode: luminosity;
+
+  @include media-breakpoint-down(md) {
+    max-width: 30%;
+
+    &-m {
+      max-width: 20%;
+    }
+
+    &-s {
+      max-width: 15%;
+    }
+  }
+}
+
+.sat-c-img {
+  @include media-breakpoint-down(md) {
+    width: 100%;
+  }
 }
 
 // section feedback
