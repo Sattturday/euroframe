@@ -818,7 +818,6 @@ video {
 
   &-f {
     margin-top: 70px;
-    margin-right: 0;
   }
 
   @include media-breakpoint-down(sm) {
@@ -827,7 +826,6 @@ video {
 
     &-f {
       margin-top: 50px;
-      margin-right: 20px;
     }
   }
 }
@@ -1134,11 +1132,6 @@ video {
   }
 }
 
-.sat-f-txt2 {
-  @include text($font-size: 26px, $font-weight: $fw-medium);
-  max-width: 270px;
-}
-
 .sat-f-img {
   margin-right: 5.5%;
   width: 184px;
@@ -1167,51 +1160,122 @@ video {
   /* Для анимации прокрутки */
 }
 
-// form feedback
+// form call
 .sat-form {
-  padding: 61px 156px 61px 91px;
   max-width: 1290px;
   width: 100%;
-  position: absolute;
-  left: calc(50% - 645px);
-  bottom: -95px;
+  min-height: 192px;
+  margin: -95px auto 106px;
   background-color: $secondary;
+
+  @include media-breakpoint-down(xl) {
+    width: 80%;
+  }
+
+  @include media-breakpoint-down(md) {
+    width: 96%;
+    margin: -134px auto 106px;
+  }
+}
+
+.sat-form-title {
+  @include text($font-size: 26px, $font-weight: $fw-medium);
+  max-width: 180px;
+  margin-right: 13.2%;
+
+  @include media-breakpoint-down(lg) {
+    text-align: center;
+    padding: 32px 0;
+    margin: 0;
+  }
+
+  @include media-breakpoint-down(md) {
+    @include text($font-size: 24px, $font-weight: $fw-medium, $line-height: 1.16);
+    padding: 33px 0;
+  }
+}
+
+.sat-form-container {
+  margin-top: 10px;
+  margin-right: 65px;
+  min-width: 695px;
+
+  @include media-breakpoint-down(xl) {
+    margin: 0;
+    padding: 30px 0;
+    min-width: 365px;
+  }
+
+  @include media-breakpoint-down(lg) {
+    padding: 0;
+    padding-bottom: 35px;
+    min-width: 280px;
+    width: 280px;
+  }
 }
 
 .sat-label {
   @include text($font-size: 14px, $font-weight: $fw-light);
   letter-spacing: 3px;
+
+  @include media-breakpoint-down(md) {
+    @include text($font-size: 10px, $font-weight: $fw-light);
+    letter-spacing: 3px;
+  }
 }
 
-.sat-f-wrap {
+.sat-wrap {
   border-bottom: 1px solid rgba(189, 189, 189, 1);
 
   span {
     @include text($font-size: 26px, $font-weight: $fw-light);
+
+    @include media-breakpoint-down(md) {
+      @include text($font-size: 20px, $font-weight: $fw-light);
+    }
   }
 }
 
 .sat-input {
   @include text($font-size: 26px, $font-weight: $fw-light);
   padding: 8px 2px;
-  width: 325px;
+  width: 100%;
+  max-width: 325px;
   background-color: inherit;
   box-sizing: border-box;
   border: 0;
   outline: none;
+
+  @include media-breakpoint-down(md) {
+    @include text($font-size: 20px, $font-weight: $fw-light);
+    padding: 8px 2px;
+    max-width: 325px;
+  }
 }
 
-.sat-f-btn {
+.sat-btn {
   width: 265px;
   height: 47px;
   @include text($font-size: 16px, $font-weight: $fw-medium);
   letter-spacing: 1.2px;
   border-radius: 36px;
+
+  &-f {
+    margin-top: 24px;
+  }
+
+  @include media-breakpoint-down(lg) {
+    width: 280px;
+    height: 44px;
+
+    &-f {
+      margin-top: 40px;
+    }
+  }
 }
 
 // footer
 .footer {
-  padding-top: 200px;
   padding-bottom: 37px;
 }
 
