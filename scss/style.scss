@@ -269,6 +269,8 @@ video {
 }
 
 .sat-h-container {
+  width: 100%;
+  max-width: 225px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -328,7 +330,7 @@ video {
     margin: 0;
   }
 
-  @include media-breakpoint-down(md) {
+  @include media-breakpoint-down(lg) {
     min-width: 187px;
   }
 }
@@ -607,11 +609,12 @@ video {
 .sat-a-txt3 {
   @include text($font-size: 76px, $font-weight: $fw-medium);
   letter-spacing: -8.9px;
+  width: 100px;
+  text-align: right;
 
   @include media-breakpoint-down(md) {
     @include text($font-size: 50px, $font-weight: $fw-medium, $line-height: 1.5);
     width: 80px;
-    text-align: right;
   }
 }
 
@@ -1160,7 +1163,7 @@ video {
   /* Для анимации прокрутки */
 }
 
-// form call
+// call form
 .sat-form {
   max-width: 1290px;
   width: 100%;
@@ -1174,7 +1177,8 @@ video {
 
   @include media-breakpoint-down(md) {
     width: 96%;
-    margin: -134px auto 106px;
+    min-width: 280px;
+    margin: -134px auto 68px;
   }
 }
 
@@ -1279,24 +1283,23 @@ video {
   padding-bottom: 37px;
 }
 
-.sat-fo-nav-item {
-  padding-bottom: 30px;
-}
-
-.sat-contacts {
-  @include list;
-  padding-top: 62px;
-  gap: 38px;
-}
-
 .sat-fo-txt1 {
   @include text($font-size: 14px, $font-weight: $fw-light);
   letter-spacing: 1px;
+
+  @include media-breakpoint-down(md) {
+    @include text($font-size: 10px, $font-weight: $fw-light);
+  }
 }
 
 .sat-fo-txt2 {
   @include text($font-size: 18px, $font-weight: $fw-medium, $line-height: 1.61);
   max-width: 308px;
+
+  @include media-breakpoint-down(md) {
+    @include text($font-size: 11px, $font-weight: $fw-medium, $line-height: 1.27);
+    letter-spacing: -0.2px;
+  }
 }
 
 .sat-fo-txt3 {
@@ -1305,6 +1308,10 @@ video {
   span {
     @include line;
   }
+
+  @include media-breakpoint-down(md) {
+    @include text($font-size: 13px, $font-weight: $fw-medium);
+  }
 }
 
 .sat-fo-txt4 {
@@ -1312,5 +1319,141 @@ video {
 
   span {
     @include line;
+  }
+
+  @include media-breakpoint-down(md) {
+    @include text($font-size: 9px);
+  }
+}
+
+// footer grid
+.sat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(auto-fit, min-content);
+
+  @include media-breakpoint-down(xl) {
+    margin: auto;
+    width: 80%;
+    gap: 40px 30px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include media-breakpoint-down(md) {
+    width: 96%;
+  }
+}
+
+// grid 1
+.sat-g-brand {
+  padding-top: 22px;
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+
+  @include media-breakpoint-down(md) {
+    padding-top: 0;
+    justify-self: center;
+    grid-row: 1 / 2;
+    grid-column: 1 / 3;
+  }
+}
+
+// grid 2
+.sat-contacts {
+  @include list;
+  padding-top: 131px;
+  gap: 38px;
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+
+  @include media-breakpoint-down(md) {
+    padding: 0;
+    gap: 30px;
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+  }
+}
+
+// grid 3
+.sat-nav {
+  padding-top: 35px;
+  grid-row: 1 / 2;
+  grid-column: 2 / 3;
+
+  li {
+    padding-bottom: 30px;
+  }
+
+  @include media-breakpoint-down(md) {
+    padding: 0;
+    padding-left: 7px;
+    padding-bottom: 65px;
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+
+    li {
+      padding-bottom: 24px;
+    }
+  }
+}
+
+// grid 4 -- sat-btn
+.sat-btn-g {
+  align-self: end;
+  grid-row: 1 / 2;
+  grid-column: 2 / 3;
+
+  @include media-breakpoint-down(md) {
+    width: 100%;
+    max-width: 302px;
+    justify-self: center;
+    grid-row: 2 / 3;
+    grid-column: 1 / 3;
+  }
+}
+
+// grid 5 
+.sat-map {
+  max-width: 635px;
+  width: 100%;
+  justify-self: end;
+  grid-row: 1 / 2;
+  grid-column: 2 / 4;
+
+  @include media-breakpoint-down(xl) {
+    justify-self: center;
+    grid-row: 2 / 3;
+    grid-column: 1 / 3;
+  }
+
+  @include media-breakpoint-down(md) {
+    padding-top: 20px;
+    grid-row: 3 / 4;
+    grid-column: 1 / 3;
+  }
+}
+
+.sat-dtop-flex {
+  padding-top: 16px;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  gap: 20px;
+
+  @include media-breakpoint-down(xl) {
+    justify-content: center;
+  }
+
+  @include media-breakpoint-down(md) {
+    padding-top: 10px;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+.sat-dtop {
+  @include media-breakpoint-down(md) {
+    width: 30px;
   }
 }
