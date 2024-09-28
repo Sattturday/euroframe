@@ -33,10 +33,12 @@ $fw-bold: 700;
   cursor: pointer;
 }
 
-@mixin text($color: $text-color,
+@mixin text(
+  $color: $text-color,
   $font-size: 18px,
   $font-weight: 400,
-  $line-height: normal) {
+  $line-height: normal
+) {
   margin: 0;
   padding: 0;
   color: $color;
@@ -135,16 +137,18 @@ footer {
     right: 0;
     height: 460px;
     /* Высота градиента */
-    background: linear-gradient(180deg,
-        $primary 25.66%,
-        rgba(66, 129, 181, 0) 100%);
+    background: linear-gradient(
+      180deg,
+      $primary 25.66%,
+      rgba(66, 129, 181, 0) 100%
+    );
 
     @include media-breakpoint-down(sm) {
       height: 256px;
     }
   }
 
-  &>* {
+  & > * {
     position: relative;
     z-index: 3;
   }
@@ -190,7 +194,7 @@ footer {
     }
   }
 
-  &>* {
+  & > * {
     position: relative;
     z-index: 3;
   }
@@ -429,9 +433,11 @@ video {
 
   @include media-breakpoint-down(md) {
     width: 140px;
-    @include text($font-size: 11px,
+    @include text(
+      $font-size: 11px,
       $font-weight: $fw-medium,
-      $line-height: 1.27);
+      $line-height: 1.27
+    );
   }
 }
 
@@ -581,7 +587,11 @@ video {
   }
 
   @include media-breakpoint-down(md) {
-    @include text($font-size: 41px, $font-weight: $fw-light, $line-height: 1.17);
+    @include text(
+      $font-size: 41px,
+      $font-weight: $fw-light,
+      $line-height: 1.17
+    );
   }
 }
 
@@ -613,7 +623,11 @@ video {
   text-align: right;
 
   @include media-breakpoint-down(md) {
-    @include text($font-size: 50px, $font-weight: $fw-medium, $line-height: 1.5);
+    @include text(
+      $font-size: 50px,
+      $font-weight: $fw-medium,
+      $line-height: 1.5
+    );
     width: 80px;
   }
 }
@@ -623,7 +637,11 @@ video {
   max-width: 155px;
 
   @include media-breakpoint-down(sm) {
-    @include text($font-size: 15px, $font-weight: $fw-light, $line-height: 0.93);
+    @include text(
+      $font-size: 15px,
+      $font-weight: $fw-light,
+      $line-height: 0.93
+    );
     max-width: 100px;
   }
 }
@@ -877,30 +895,38 @@ video {
   background-repeat: no-repeat;
 
   &-1 {
-    background: linear-gradient(to bottom,
+    background: linear-gradient(
+        to bottom,
         rgba(0, 49, 90, 0) calc(100% - 190px),
-        rgba(0, 49, 90, 0.86) 100%),
+        rgba(0, 49, 90, 0.86) 100%
+      ),
       url(../images/card-1.jpg);
   }
 
   &-2 {
-    background: linear-gradient(to bottom,
+    background: linear-gradient(
+        to bottom,
         rgba(0, 49, 90, 0) calc(100% - 190px),
-        rgba(0, 49, 90, 0.86) 100%),
+        rgba(0, 49, 90, 0.86) 100%
+      ),
       url(../images/card-2.jpg);
   }
 
   &-3 {
-    background: linear-gradient(to bottom,
+    background: linear-gradient(
+        to bottom,
         rgba(0, 49, 90, 0) calc(100% - 190px),
-        rgba(0, 49, 90, 0.86) 100%),
+        rgba(0, 49, 90, 0.86) 100%
+      ),
       url(../images/card-3.jpg);
   }
 
   &-4 {
-    background: linear-gradient(to bottom,
+    background: linear-gradient(
+        to bottom,
         rgba(0, 49, 90, 0) calc(100% - 190px),
-        rgba(0, 49, 90, 0.86) 100%),
+        rgba(0, 49, 90, 0.86) 100%
+      ),
       url(../images/card-4.jpg);
     background-position: 0 center;
   }
@@ -910,30 +936,38 @@ video {
     width: 360px;
 
     &-1 {
-      background: linear-gradient(to bottom,
+      background: linear-gradient(
+          to bottom,
           rgba(0, 49, 90, 0.3) calc(100% - 190px),
-          rgba(0, 49, 90, 1) 100%),
+          rgba(0, 49, 90, 1) 100%
+        ),
         url(../images/card-1.jpg);
     }
 
     &-2 {
-      background: linear-gradient(to bottom,
+      background: linear-gradient(
+          to bottom,
           rgba(0, 49, 90, 0.3) calc(100% - 190px),
-          rgba(0, 49, 90, 1) 100%),
+          rgba(0, 49, 90, 1) 100%
+        ),
         url(../images/card-2.jpg);
     }
 
     &-3 {
-      background: linear-gradient(to bottom,
+      background: linear-gradient(
+          to bottom,
           rgba(0, 49, 90, 0.3) calc(100% - 190px),
-          rgba(0, 49, 90, 1) 100%),
+          rgba(0, 49, 90, 1) 100%
+        ),
         url(../images/card-3.jpg);
     }
 
     &-4 {
-      background: linear-gradient(to bottom,
+      background: linear-gradient(
+          to bottom,
           rgba(0, 49, 90, 0.3) calc(100% - 190px),
-          rgba(0, 49, 90, 1) 100%),
+          rgba(0, 49, 90, 1) 100%
+        ),
         url(../images/card-4.jpg);
       background-position: 0 center;
     }
@@ -1021,18 +1055,21 @@ video {
 }
 
 .sat-m-txt2 {
-  @include text($color: $color-grey,
+  @include text(
+    $color: $color-grey,
     $font-size: 16px,
     $font-weight: $fw-light,
-    $line-height: 1.56);
+    $line-height: 1.56
+  );
   max-width: 536px;
 
-
   @include media-breakpoint-down(md) {
-    @include text($color: $color-grey,
+    @include text(
+      $color: $color-grey,
       $font-size: 12px,
       $font-weight: $fw-light,
-      $line-height: 1.41);
+      $line-height: 1.41
+    );
     max-width: 300px;
   }
 }
@@ -1194,7 +1231,11 @@ video {
   }
 
   @include media-breakpoint-down(md) {
-    @include text($font-size: 24px, $font-weight: $fw-medium, $line-height: 1.16);
+    @include text(
+      $font-size: 24px,
+      $font-weight: $fw-medium,
+      $line-height: 1.16
+    );
     padding: 33px 0;
   }
 }
@@ -1297,7 +1338,11 @@ video {
   max-width: 308px;
 
   @include media-breakpoint-down(md) {
-    @include text($font-size: 11px, $font-weight: $fw-medium, $line-height: 1.27);
+    @include text(
+      $font-size: 11px,
+      $font-weight: $fw-medium,
+      $line-height: 1.27
+    );
     letter-spacing: -0.2px;
   }
 }
@@ -1412,7 +1457,7 @@ video {
   }
 }
 
-// grid 5 
+// grid 5
 .sat-map {
   max-width: 635px;
   width: 100%;
